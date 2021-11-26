@@ -53,7 +53,8 @@ require('packer').startup(function()
     }
   -- telescope
   use {
-       'nvim-telescope/telescope.nvim'
+       'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
     }
   -- dashboard
   use {
@@ -79,9 +80,12 @@ require('packer').startup(function()
   use {
         'neovim/nvim-lspconfig'
   }
-  --use {
-        --'hrsh7th/cmp-nvim-lsp'
-  --}
+  use {
+        'hrsh7th/cmp-nvim-lsp'
+  }
+  use {
+        'hrsh7th/nvim-cmp'
+  }
 
   use {
         'glepnir/lspsaga.nvim'
