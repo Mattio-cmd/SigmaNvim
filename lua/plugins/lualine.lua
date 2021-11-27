@@ -1,3 +1,7 @@
+-- For lualine
+
+-- let g:airline_left_sep =  '' "'
+-- let g:airline_left_alt_sep =  '' "''
 
 require'lualine'.setup{
 options = {
@@ -5,7 +9,7 @@ options = {
     theme = 'gruvbox-material',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},  --  
---    section_separators = { left = '', right = ''},  --  
+    --section_separators = { left = '', right = ''},  --  
     disabled_filetypes = {},
     always_divide_middle = true,
   },
@@ -74,6 +78,11 @@ options = {
   lualine_y = {},
   lualine_z = {}
           },
+  lualine_x = {
+      { 'diagnostics', sources = {"nvim_lsp"}, symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} },
+      'encoding',
+      'filetype'
+    },
   extensions = {}
 }
 
@@ -126,3 +135,4 @@ require'nvim-tree'.setup {
     }
   }
 }
+

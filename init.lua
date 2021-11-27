@@ -69,6 +69,9 @@ require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+  use {
+        'norcalli/nvim-colorizer.lua'
+  }
   -- filetype
   use { --  Easily speed up your neovim startup time!. A faster version of filetype.vim
         'nathom/filetype.nvim',
@@ -86,7 +89,9 @@ require('packer').startup(function()
   use {
         'hrsh7th/nvim-cmp'
   }
-
+  use {
+        'onsails/lspkind-nvim'
+  }
   use {
         'glepnir/lspsaga.nvim'
   }
@@ -600,6 +605,35 @@ set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 ]]
 
 -- cmp.rc.vim
+  local cmp = require'cmp'
+  local lspkind = require'lspkind'
+
+  cmp.setup({
+    snippet = {
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body)
+      end,
+    },
+    mapping = {
+      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.close(),
+      ['<CR>'] = cmp.mapping.confirm({
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = true
+      }),
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+    }, {
+      { name = 'buffer' },
+    }),
+    formatting = {
+      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    }
+  })
+
 -- lspsaga
 local saga = require 'lspsaga'
 
