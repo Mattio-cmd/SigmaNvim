@@ -90,6 +90,9 @@ require('packer').startup(function()
         'hrsh7th/nvim-cmp'
   }
   use {
+        'nvim-lua/completion-nvim'
+  }
+  use {
         'onsails/lspkind-nvim'
   }
   use {
@@ -231,7 +234,10 @@ nnoremap <C-q> :wq!<CR> " Alternative way to quit
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 " <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr> <CR> pumvisible() ? complete_info()["selected"] != "-1" ?
+               \ "\<Plug>(completion_confirm_completion)" : "\<C-e>\<CR>" : "\<CR>"
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
@@ -243,7 +249,7 @@ nnoremap J mzJ`z
 nnoremap <C-f> :NvimTreeToggle<CR>
 nnoremap <leader>l <cmd>call setqflist([])<cr>
 " For fzf
-nnoremap <C-o> :Files<CR>
+"noremap <c-i> :Telescope oldfiles<CR>
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -285,7 +291,8 @@ nmap <Leader>ss :<C-u>SessionSave<CR>
 nmap <Leader>sl :<C-u>SessionLoad<CR>
 " Lspsaga
 nnoremap <silent> <C-j> :Lspsaga diagnostic_jump_next<CR>
-"nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+nnoremap <silent> <C-k> :Lspsaga diagnostic_jump_prev<CR>
+nnoremap <S-l> :Lspsaga hover_doc<CR>
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
 nnoremap <silent> gp :Lspsaga preview_definition<CR>
 ]]
@@ -633,6 +640,10 @@ set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
       format = lspkind.cmp_format({with_text = false, maxwidth = 50})
     }
   })
+vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
+
+-- completion
+vim.cmd [[let g:completion_confirm_key = ""]]
 
 -- lspsaga
 local saga = require 'lspsaga'
@@ -651,9 +662,9 @@ require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.eslint.setup{}
+require'lspconfig'.flow.setup{}
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
-
 
 -- Use an on_attach function to only map the following keys 
 -- after the language server attaches to the current buffer
@@ -697,8 +708,8 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
-
-  --protocol.SymbolKind = { }
+  
+ --protocol.SymbolKind = { }
   protocol.CompletionItemKind = {
     '', -- Text
     '', -- Method
@@ -813,3 +824,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
   }
 )
+
+-- completion.rc.vim
