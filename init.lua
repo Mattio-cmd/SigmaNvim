@@ -80,6 +80,10 @@ require('packer').startup(function()
   use { -- Speed up loading Lua modules in Neovim to improve startup time.
         'lewis6991/impatient.nvim',
   }
+  use { -- Speed up loading Lua modules in Neovim to improve startup time.
+        'yggdroot/indentLine',
+  }
+
   use {
         'neovim/nvim-lspconfig'
   }
