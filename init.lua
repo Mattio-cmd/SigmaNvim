@@ -1,4 +1,4 @@
-        --███╗   ██╗██╗   ██╗██╗███╗   ███╗
+      	--███╗   ██╗██╗   ██╗██╗███╗   ███╗
         --████╗  ██║██║   ██║██║████╗ ████║
         --██╔██╗ ██║██║   ██║██║██╔████╔██║
         --██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║
@@ -19,7 +19,6 @@ vim.cmd [[
 ]]
 
 -- Sourcing configs
-require('configs')
 require('mappings')
 require('plugins/impatient_nvim')
 require('plugins/filetype_nvim')
@@ -80,7 +79,7 @@ require('packer').startup(function()
   use { -- Speed up loading Lua modules in Neovim to improve startup time.
         'lewis6991/impatient.nvim',
   }
-  use { -- Speed up loading Lua modules in Neovim to improve startup time.
+  use { 
         'yggdroot/indentLine',
   }
 
@@ -610,9 +609,7 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.mdx set filetype=markdown
 " Flow
 au BufNewFile,BufRead *.flow set filetype=javascript
-
 set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
-
 ]]
 
 -- cmp.rc.vim
