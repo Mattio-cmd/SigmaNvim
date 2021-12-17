@@ -19,7 +19,7 @@ vim.cmd [[
 ]]
 
 -- Sourcing configs
-require('mappings')
+require('mappings/mappings')
 require('plugins/impatient_nvim')
 require('plugins/filetype_nvim')
 
