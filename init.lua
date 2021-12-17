@@ -79,9 +79,9 @@ require('packer').startup(function()
   use { -- Speed up loading Lua modules in Neovim to improve startup time.
         'lewis6991/impatient.nvim',
   }
-  use { 
-        'yggdroot/indentLine',
-  }
+  --use { --Preview for markdown files
+        --'iamcco/markdown-preview.nvim', 
+  --}
 
   use {
         'neovim/nvim-lspconfig'
@@ -293,8 +293,6 @@ nnoremap <Leader>d :Dashboard<CR>
 nmap <Leader>ss :<C-u>SessionSave<CR>
 nmap <Leader>sl :<C-u>SessionLoad<CR>
 " Lspsaga
-nnoremap <silent> <C-j> :Lspsaga diagnostic_jump_next<CR>
-nnoremap <silent> <C-k> :Lspsaga diagnostic_jump_prev<CR>
 nnoremap <S-l> :Lspsaga hover_doc<CR>
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
 nnoremap <silent> gp :Lspsaga preview_definition<CR>
