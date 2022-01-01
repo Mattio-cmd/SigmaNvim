@@ -20,4 +20,5 @@
 - ```Shift + k``` will bring a help menu in whatever happens you are positioned.
 
 ## TO-DO
--  I really need to clean my init.lua
+[x]  I really need to clean my init.lua (DONE)
+[ ] Optimize it
