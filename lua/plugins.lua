@@ -22,7 +22,7 @@ require('packer').startup(function()
       require('mattio.lualine')
     end
   }
-  
+ 
   -- devicons
   use {
     'kyazdani42/nvim-web-devicons'
@@ -85,6 +85,10 @@ require('packer').startup(function()
   --use { --Preview for markdown files
   --'iamcco/markdown-preview.nvim', 
   --}
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
 
 

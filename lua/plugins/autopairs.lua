@@ -52,3 +52,19 @@ npairs.add_rules {
     :set_end_pair_length(2),
 
 }
+
+vim.cmd [[
+  " File types "{{{
+" ---------------------------------------------------------------------
+" JavaScript
+au BufNewFile,BufRead *.es6 setf javascript
+" TypeScript
+au BufNewFile,BufRead *.tsx setf typescriptreact
+" Markdown
+au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.mdx set filetype=markdown
+" Flow
+au BufNewFile,BufRead *.flow set filetype=javascript
+set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
+]]
+

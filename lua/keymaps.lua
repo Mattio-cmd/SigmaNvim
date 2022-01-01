@@ -1,4 +1,9 @@
 -- Keymaps
+-- --Remap space as leader key
+vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 vim.cmd [[
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
@@ -23,6 +28,7 @@ nnoremap <S-p> :MarkdownPreviewToggle<CR>
 " Alternate way to save
 nnoremap <C-s> :w<CR> " Alternate way to quit and save nnoremap 
 nnoremap <C-q> :wq!<CR> " Alternative way to quit
+nnoremap <S-q> :q!<CR> " Foce quit
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 " <TAB>: completion.
