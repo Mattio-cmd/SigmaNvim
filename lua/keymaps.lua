@@ -57,7 +57,7 @@ nnoremap <C-x> :bw<cr>
 " Coc definitions
 map <leader>gd <Plug>(coc-definition)
 nmap <leader>dr <Plug>(coc-references)
-nmap <C-p> :GFiles<CR>
+nmap <C-p> :Telescope git_files<CR>
 " For the terminal
 noremap <leader>/ :split<CR> :resize 10<CR> :term<CR> 
 " For the BIG terminal
@@ -83,4 +83,9 @@ nnoremap <leader>k :m .-2<CR>==
 nnoremap <Leader>ff :DashboardFindFile<CR>
 nnoremap <Leader>f :DashboardFindHistory<CR>
 nnoremap <Leader>d :Dashboard<CR>
+" lspsaga aka pain
+nnoremap <silent> <S-j> :Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent> <S-k> :Lspsaga diagnostic_jump_prev<CR>
+nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+nnoremap <silent> gp :Lspsaga preview_definition<CR>
 ]]

@@ -71,7 +71,7 @@ require('packer').startup(function()
         'onsails/lspkind-nvim'
   }
   use {
-        'glepnir/lspsaga.nvim'
+        'tami5/lspsaga.nvim'
   }
   --== Plugins im not currently using ==--
   -- kanagawa (colorscheme)
