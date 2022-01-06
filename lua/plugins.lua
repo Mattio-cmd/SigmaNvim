@@ -7,7 +7,7 @@ end
 require('packer').startup(function()
  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-   -- colorscheme 
+   -- colorscheme
   use {
     'sainnhe/gruvbox-material'
     }
@@ -16,13 +16,13 @@ require('packer').startup(function()
     'preservim/nerdcommenter'
   }
   -- lualine
-  use { 
+  use {
     'nvim-lualine/lualine.nvim',
-    config = function() 
+    config = function()
       require('mattio.lualine')
     end
   }
- 
+
   -- devicons
   use {
     'kyazdani42/nvim-web-devicons'
@@ -41,12 +41,16 @@ require('packer').startup(function()
     'glepnir/dashboard-nvim'
     }
   -- autopairs
-  use { 
+  use {
     'windwp/nvim-autopairs',
-    config = function() 
+    config = function()
       require('mattio.autopairs')
     end
     }
+  use {
+     'L3MON4D3/LuaSnip'
+  }
+
   -- treesitter
   use {
         'nvim-treesitter/nvim-treesitter',
@@ -83,7 +87,7 @@ require('packer').startup(function()
     --'nathom/filetype.nvim',
   --}
   --use { --Preview for markdown files
-  --'iamcco/markdown-preview.nvim', 
+  --'iamcco/markdown-preview.nvim',
   --}
 
   if packer_bootstrap then
