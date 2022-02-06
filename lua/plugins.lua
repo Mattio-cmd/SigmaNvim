@@ -47,8 +47,14 @@ require('packer').startup(function()
       require('mattio.autopairs')
     end
     }
+
+  use { --Preview for markdown files
+    'davinche/godown-vim',
+  }
+
   use {
-     'L3MON4D3/LuaSnip'
+     'akinsho/bufferline.nvim',
+      requires = 'kyazdani42/nvim-web-devicons'
   }
 
   -- treesitter
@@ -77,17 +83,24 @@ require('packer').startup(function()
   use {
         'tami5/lspsaga.nvim'
   }
+  use {
+        'elkowar/yuck.vim'
+  }
+  use {
+    'axvr/zepl.vim'
+  }
+
   --== Plugins im not currently using ==--
   -- kanagawa (colorscheme)
   --use {
     --'rebelot/kanagawa.nvim'
   --}
+  --use {
+    --'L3MON4D3/LuaSnip'
+  --}
   ---- filetype
   --use { --  Easily speed up your neovim startup time!. A faster version of filetype.vim
     --'nathom/filetype.nvim',
-  --}
-  --use { --Preview for markdown files
-  --'iamcco/markdown-preview.nvim',
   --}
 
   if packer_bootstrap then

@@ -24,9 +24,9 @@ nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 " Markdown Preview
-nnoremap <S-p> :MarkdownPreviewToggle<CR>
+nnoremap <S-p> :GodownToggle<CR>
 " Alternate way to save
-nnoremap <C-s> :w<CR> " Alternate way to quit and save nnoremap 
+nnoremap <C-s> :w<CR> " Alternate way to quit and save nnoremap
 nnoremap <C-q> :wq!<CR> " Alternative way to quit
 nnoremap <S-q> :q!<CR> " Foce quit
 " Use control-c instead of escape
@@ -59,9 +59,9 @@ map <leader>gd <Plug>(coc-definition)
 nmap <leader>dr <Plug>(coc-references)
 nmap <C-p> :Telescope git_files<CR>
 " For the terminal
-noremap <leader>/ :split<CR> :resize 10<CR> :term<CR> 
+noremap <leader>/ :split<CR> :resize 10<CR> :term<CR>
 " For the BIG terminal
-noremap <leader>p :split<CR> :resize 60<CR> :term<CR> 
+noremap <leader>p :split<CR> :resize 60<CR> :term<CR>
 " For spliting windows
 nnoremap <C-v> :vsplit<CR>
 nnoremap <S-h> :split<CR>
@@ -83,9 +83,16 @@ nnoremap <leader>k :m .-2<CR>==
 nnoremap <Leader>ff :DashboardFindFile<CR>
 nnoremap <Leader>f :DashboardFindHistory<CR>
 nnoremap <Leader>d :Dashboard<CR>
+" For Repl
+nnoremap  <C-o> :hide Repl racket <CR> :ReplSend<CR>
 " lspsaga aka pain
 nnoremap <silent> <S-j> :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> <S-k> :Lspsaga diagnostic_jump_prev<CR>
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
 nnoremap <silent> gp :Lspsaga preview_definition<CR>
+nnoremap <silent> gc :Lspsaga code_action<CR>
+" For the skeletons
+" Read an empty HTML template and move cursor to title
+nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>3jwf>a
+nnoremap ,c :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<TAB>
 ]]
