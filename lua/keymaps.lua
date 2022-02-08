@@ -59,7 +59,7 @@ map <leader>gd <Plug>(coc-definition)
 nmap <leader>dr <Plug>(coc-references)
 nmap <C-p> :Telescope git_files<CR>
 " For the terminal
-noremap <leader>/ :split<CR> :resize 10<CR> :term<CR>
+noremap ,, :split<CR> :resize 10<CR> :term<CR>
 " For the BIG terminal
 noremap <leader>p :split<CR> :resize 60<CR> :term<CR>
 " For spliting windows
@@ -96,3 +96,5 @@ nnoremap <silent> gc :Lspsaga code_action<CR>
 nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>3jwf>a
 nnoremap ,c :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<TAB>
 ]]
+
+-- Remember that you can jump to a file with the gf command in normal mode if your cursor in above it
