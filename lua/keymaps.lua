@@ -59,7 +59,7 @@ map <leader>gd <Plug>(coc-definition)
 nmap <leader>dr <Plug>(coc-references)
 nmap <C-p> :Telescope git_files<CR>
 " For the terminal
-noremap ,, :split<CR> :resize 10<CR> :term<CR>
+noremap ,, :split<CR> :res 10<CR> :term<CR>
 " For the BIG terminal
 noremap <leader>p :split<CR> :resize 60<CR> :term<CR>
 " For spliting windows
@@ -84,7 +84,8 @@ nnoremap <Leader>ff :DashboardFindFile<CR>
 nnoremap <Leader>f :DashboardFindHistory<CR>
 nnoremap <Leader>d :Dashboard<CR>
 " For Repl
-nnoremap  <C-o> :hide Repl racket <CR> :ReplSend<CR>
+nnoremap  <C-c> :hide Repl racket <CR>
+vnoremap  <C-o> :ReplSend<CR>
 " lspsaga aka pain
 nnoremap <silent> <S-j> :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> <S-k> :Lspsaga diagnostic_jump_prev<CR>
