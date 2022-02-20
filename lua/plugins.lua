@@ -53,8 +53,14 @@ require('packer').startup(function()
   }
 
   use {
+    'lukas-reineke/indent-blankline.nvim',
+    require("plugins.indent-blankline"),
+  }
+
+  use {
      'akinsho/bufferline.nvim',
-      requires = 'kyazdani42/nvim-web-devicons'
+      requires = 'kyazdani42/nvim-web-devicons',
+      require("plugins.bufferline"),
   }
 
   -- treesitter
@@ -84,10 +90,7 @@ require('packer').startup(function()
         'tami5/lspsaga.nvim'
   }
   use {
-        'elkowar/yuck.vim'
-  }
-  use {
-    'axvr/zepl.vim'
+    'dart-lang/dart-vim-plugin'
   }
 
   --== Plugins im not currently using ==--
@@ -95,12 +98,22 @@ require('packer').startup(function()
   --use {
     --'rebelot/kanagawa.nvim'
   --}
+
   --use {
     --'L3MON4D3/LuaSnip'
   --}
+
+  --use {
+    --'elkowar/yuck.vim'
+  --}
+
   ---- filetype
   --use { --  Easily speed up your neovim startup time!. A faster version of filetype.vim
     --'nathom/filetype.nvim',
+  --}
+
+  --use {
+    --'axvr/zepl.vim'
   --}
 
   if packer_bootstrap then

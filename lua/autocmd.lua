@@ -92,3 +92,8 @@ cmd([[
 cmd [[
   highlight GitSignsCurrentLineBlame guifg=#827e7e
 ]]
+
+-- dart ls
+cmd [[
+let g:lsc_auto_map = v:true
+]]
