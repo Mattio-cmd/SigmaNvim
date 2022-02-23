@@ -5,7 +5,7 @@ void main() {
 }
 
 class  extends StatelessWidget {
-  const ({ Key? key }) : super(key: key);
+  const RE ({ Key? key }) : super(key: key); // RE = replace with my own custom name
 
   @override
   Widget build(BuildContext contect) {
