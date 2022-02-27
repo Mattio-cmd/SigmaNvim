@@ -97,6 +97,9 @@ nnoremap <silent> gc :Lspsaga code_action<CR>
 nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>3jwf>a
 nnoremap ,c :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<TAB>
 nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>6j6li
+
+" For flutter development
+nnoremap ;; :FlutterOutlineToggle<CR>
 ]]
 
 -- Remember that you can jump to a file with the gf command in normal MODE if your cursor in above it

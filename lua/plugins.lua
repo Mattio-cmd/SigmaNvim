@@ -18,9 +18,6 @@ require('packer').startup(function()
   -- lualine
   use {
     'nvim-lualine/lualine.nvim',
-    config = function()
-      require('mattio.lualine')
-    end
   }
 
   -- devicons
@@ -43,9 +40,6 @@ require('packer').startup(function()
   -- autopairs
   use {
     'windwp/nvim-autopairs',
-    config = function()
-      require('mattio.autopairs')
-    end
     }
 
   use { --Preview for markdown files
@@ -54,13 +48,11 @@ require('packer').startup(function()
 
   use {
     'lukas-reineke/indent-blankline.nvim',
-    require("plugins.indent-blankline"),
   }
 
   use {
      'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
-      require("plugins.bufferline"),
   }
 
   -- treesitter
@@ -93,11 +85,16 @@ require('packer').startup(function()
     'dart-lang/dart-vim-plugin'
   }
 
+  use {
+    'akinsho/flutter-tools.nvim'
+  }
+
+  use {
+    'rebelot/kanagawa.nvim'
+  }
+
   --== Plugins im not currently using ==--
   -- kanagawa (colorscheme)
-  --use {
-    --'rebelot/kanagawa.nvim'
-  --}
 
   --use {
     --'L3MON4D3/LuaSnip'
