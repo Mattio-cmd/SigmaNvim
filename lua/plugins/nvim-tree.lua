@@ -22,6 +22,7 @@ require'nvim-tree'.setup {
       error = "",
     }
   },
+
   update_focused_file = {
     enable      = false,
     update_cwd  = false,
@@ -35,6 +36,7 @@ require'nvim-tree'.setup {
     dotfiles = false,
     custom = {}
   },
+
   view = {
     width = 30,
     height = 30,
