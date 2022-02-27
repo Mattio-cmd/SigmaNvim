@@ -102,4 +102,35 @@ nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>6j6li
 nnoremap ;; :FlutterOutlineToggle<CR>
 ]]
 
+local keymap = vim.api.nvim_set_keymap
+local options = {noremap = true, silent = true}
+
+-- Move to previous/next
+keymap('n', '}}', ':BufferLineCycleNext<CR>', options)
+keymap('n', '{{', ':BufferLineCyclePrev<CR>', options)
+
+-- Re-order to previous/next
+keymap('n', '<Leader>.', ':BufferLineMoveNext<CR>', options)
+keymap('n', '<Leader>,', ':BufferLineMovePrev<CR>', options)
+
+-- Close buffer
+-- nnoremap <silent>    <A-c> :BufferClose<CR>
+keymap('n', '<Leader>q', ':bd<CR>', options)
+
+-- Magic buffer-picking mode
+keymap('n', '<Leader>?', ':BufferLinePick<CR>', options)
+
+-- go to buffer number
+keymap('n', ';1', ':BufferLineGoToBuffer 1<CR>', options)
+keymap('n', ';2', ':BufferLineGoToBuffer 2<CR>', options)
+keymap('n', ';3', ':BufferLineGoToBuffer 3<CR>', options)
+keymap('n', ';4', ':BufferLineGoToBuffer 4<CR>', options)
+keymap('n', ';5', ':BufferLineGoToBuffer 5<CR>', options)
+keymap('n', ';6', ':BufferLineGoToBuffer 6<CR>', options)
+keymap('n', ';7', ':BufferLineGoToBuffer 7<CR>', options)
+keymap('n', ';8', ':BufferLineGoToBuffer 8<CR>', options)
+keymap('n', ';9', ':BufferLineGoToBuffer 9<CR>', options)
+
+
+
 -- Remember that you can jump to a file with the gf command in normal MODE if your cursor in above it
