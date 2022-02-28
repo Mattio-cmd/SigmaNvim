@@ -79,10 +79,8 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
-" For dashboar.vim
-nnoremap <Leader>ff :DashboardFindFile<CR>
-nnoremap <Leader>f :DashboardFindHistory<CR>
-nnoremap <Leader>d :Dashboard<CR>
+" For alpha greeter
+nnoremap <Leader>d :Alpha<CR>
 " For Repl
 nnoremap  <C-c> :hide Repl racket <CR>
 vnoremap  <C-o> :ReplSend<CR>
