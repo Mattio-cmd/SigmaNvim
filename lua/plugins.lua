@@ -33,10 +33,6 @@ require('packer').startup(function()
        'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-  -- dashboard
-  use {
-    'glepnir/dashboard-nvim'
-    }
   -- autopairs
   use {
     'windwp/nvim-autopairs',
@@ -45,6 +41,12 @@ require('packer').startup(function()
   use { --Preview for markdown files
     'davinche/godown-vim',
   }
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+}
 
   use {
     'lukas-reineke/indent-blankline.nvim',
@@ -89,12 +91,12 @@ require('packer').startup(function()
     'akinsho/flutter-tools.nvim'
   }
 
+  -- kanagawa (colorscheme)
   use {
     'rebelot/kanagawa.nvim'
   }
 
   --== Plugins im not currently using ==--
-  -- kanagawa (colorscheme)
 
   --use {
     --'L3MON4D3/LuaSnip'

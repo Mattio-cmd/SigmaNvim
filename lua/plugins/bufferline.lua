@@ -1,7 +1,7 @@
 require('bufferline').setup {
 	options = {
 		numbers = "ordinal", -- "none" | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string
-		always_show_bufferline = false, -- don't show bufferline if there is only one file is opened
+		always_show_bufferline = true, -- don't show bufferline if there is only one file is opened
 
 		close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"

@@ -1,4 +1,9 @@
 -- For lualine
+local function date_time()
+	local datetime = os.date("%I:%M:%p")
+	return datetime
+end
+
 
 -- let g:airline_left_sep =  '' "'
 -- let g:airline_left_alt_sep =  '' "''
@@ -61,6 +66,7 @@ options = {
     lualine_b = {'branch', 'diff',
                   {'diagnostics', sources={'nvim_diagnostic'}}},
     lualine_c = {'filename'},
+    lualine_w = { date_time() },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
