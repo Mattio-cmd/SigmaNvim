@@ -98,25 +98,14 @@ nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>6j6li
 
 " For flutter development
 nnoremap ;; :FlutterOutlineToggle<CR>
+nnoremap ff :FlutterRun<CR>
+nnoremap fq :FlutterQuit<CR>
+nnoremap fr :FlutterReload<CR>
+nnoremap frr :FlutterRestart<CR>
 ]]
 
 local keymap = vim.api.nvim_set_keymap
 local options = {noremap = true, silent = true}
-
--- Move to previous/next
-keymap('n', '}}', ':BufferLineCycleNext<CR>', options)
-keymap('n', '{{', ':BufferLineCyclePrev<CR>', options)
-
--- Re-order to previous/next
-keymap('n', '<Leader>.', ':BufferLineMoveNext<CR>', options)
-keymap('n', '<Leader>,', ':BufferLineMovePrev<CR>', options)
-
--- Close buffer
--- nnoremap <silent>    <A-c> :BufferClose<CR>
-keymap('n', '<Leader>q', ':bd<CR>', options)
-
--- Magic buffer-picking mode
-keymap('n', '<Leader>?', ':BufferLinePick<CR>', options)
 
 -- go to buffer number
 keymap('n', ';1', ':BufferLineGoToBuffer 1<CR>', options)
