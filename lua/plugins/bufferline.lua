@@ -30,7 +30,7 @@ require('bufferline').setup {
 
 		-- can also be a table containing 2 custom separators
 		-- [focused and unfocused]. eg: { '|', '|' }
-		separator_style = {"slant", "slant"}, -- options "slant" | "thick" | "thin" | { 'any', 'any' },
+		separator_style = {"", ""}, -- options "slant" | "thick" | "thin" | { 'any', 'any' },
 		offsets = {
 			-- options function , text_" "h always_show_bufferline = false
 			{filetype = "NvimTree", text = "Explorer", text_align = "left"},

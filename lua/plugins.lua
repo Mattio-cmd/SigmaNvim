@@ -20,6 +20,11 @@ require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
   }
 
+  -- presence.nvim
+  use {
+  'andweeb/presence.nvim'
+  }
+
   -- devicons
   use {
     'kyazdani42/nvim-web-devicons'

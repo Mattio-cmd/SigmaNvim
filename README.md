@@ -1,6 +1,5 @@
-#  Neovim config
+#  Sigma Nvim
 ###### in lua
-##### by Mattio-cmd
 # WIP
 
 ##  Important remaps
@@ -10,7 +9,7 @@
 - ```Control + s``` will save your current buffer.
 - ```Control + q``` will save and quit your vim sesion.
 - ```Control + x``` will close the current buffer you are in but will not save your work.
-- ```leader + /``` will bring a terminal at the bottom of the screen. 
+- ```leader + /``` will bring a terminal at the bottom of the screen.
   * The terminal will be resized at just 20 for better screen space management.
   * This is usefull for C, C++ & Rust programing.
 - ```Control + p```  will bring a BIG terminal window within the vim instance.
@@ -20,5 +19,6 @@
 - ```Shift + k``` will bring a help menu in whatever happens you are positioned.
 
 ## TO-DO
-[x]  I really need to clean my init.lua (DONE)
-[ ] Optimize it
+[x] I really need to clean my init.lua (DONE)
+[x] Optimize it
+[ ] Add a logo or something to it
