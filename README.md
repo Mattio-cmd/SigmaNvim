@@ -1,6 +1,6 @@
 #  Sigma Nvim
 ###### in lua
-# This is a WIP
+# This is a WIP. Not complete (yet)
 
 ## Plugins
 - packer.nvim
@@ -39,6 +39,10 @@
 - ```Control + v``` will vertically split the window.
 - ```Shift + h``` will horizontally split the window.
 - ```Shift + k``` will bring a help menu in whatever happens you are positioned.
+
+## Extras
+- Shell script for changing the coloscheme depending on the hour of the day.
+- Wallpapers to match the colorschemes
 
 ## TO-DO
 [x] Have a clean codebase
