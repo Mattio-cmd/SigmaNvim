@@ -88,11 +88,6 @@ cmd([[
 -- Floating diagnostics
 -- cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
 
--- Gitsigns color
-cmd [[
-  highlight GitSignsCurrentLineBlame guifg=#827e7e
-]]
-
 -- dart ls
 cmd [[
 let g:lsc_auto_map = v:true

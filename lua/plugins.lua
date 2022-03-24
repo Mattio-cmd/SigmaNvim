@@ -120,11 +120,6 @@ require('packer').startup(function()
     --'elkowar/yuck.vim'
   --}
 
-  ---- filetype
-  --use { --  Easily speed up your neovim startup time!. A faster version of filetype.vim
-    --'nathom/filetype.nvim',
-  --}
-
   --use {
     --'axvr/zepl.vim'
   --}
@@ -133,5 +128,3 @@ require('packer').startup(function()
     require('packer').sync()
   end
 end)
-
-

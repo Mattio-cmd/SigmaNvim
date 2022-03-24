@@ -3,6 +3,8 @@
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+local keymap = vim.api.nvim_set_keymap
+local options = {noremap = true, silent = true}
 
 vim.cmd [[
 " Better nav for omnicomplete
@@ -103,7 +105,6 @@ nnoremap fq :FlutterQuit<CR>
 nnoremap fr :FlutterReload<CR>
 nnoremap frr :FlutterRestart<CR>
 
-
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
 nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
 nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
@@ -114,9 +115,3 @@ nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
 nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
 nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 ]]
-
-local keymap = vim.api.nvim_set_keymap
-local options = {noremap = true, silent = true}
-
-
--- Remember that you can jump to a file with the gf command in normal mode if your cursor in above it
