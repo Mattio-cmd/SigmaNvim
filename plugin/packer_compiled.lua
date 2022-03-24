@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
     url = "https://github.com/dart-lang/dart-vim-plugin"
   },
+  ["filetype.nvim"] = {
+    loaded = true,
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/filetype.nvim",
+    url = "https://github.com/nathom/filetype.nvim"
+  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
@@ -109,6 +114,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
+  },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -184,6 +194,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
