@@ -5,13 +5,15 @@
         --██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║
         --╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝ by Mattio-cmd
 
+require('plugins/impatient_nvim') -- impatient needs to be setup before any other lua plugin is loaded so it is recommended you add the following near the start of your
+require('plugins/filetype_nvim') -- Easily speed up your neovim startup time!
 require("keymaps")
 require("plugins")
 require("settings")
 require("autocmd")
 require("plugins.nvim-tree")
-require("plugins.gruvbox-material")
---require("plugins.kanagawa")
+--require("plugins.gruvbox-material")
+require("plugins.kanagawa")
 require("plugins.treesitter")
 require("plugins.lualine")
 require("plugins.autopairs")

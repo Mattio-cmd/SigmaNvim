@@ -7,6 +7,15 @@ end
 require('packer').startup(function()
  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
+ -- Improve Start-UP time
+	use { -- Speed up loading Lua modules in Neovim to improve startup time.
+		'lewis6991/impatient.nvim'
+	}
+
+	use { -- Easily speed up your neovim startup time!. A faster version of filetype.vim
+		'nathom/filetype.nvim'
+  	}
    -- colorscheme
   use {
     'sainnhe/gruvbox-material'
