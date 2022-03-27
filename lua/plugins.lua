@@ -86,8 +86,29 @@ require('packer').startup(function()
         'hrsh7th/cmp-nvim-lsp'
   }
   use {
-        'hrsh7th/nvim-cmp'
+    'simrat39/symbols-outline.nvim',
   }
+  use {
+  'hrsh7th/nvim-cmp',
+  requires = {
+    {
+      'quangnguyen30192/cmp-nvim-tags',
+      -- if you want the sources is available for some file types
+      ft = {
+        'c',
+        'dart'
+      }
+    }
+  },
+  config = function ()
+    require'cmp'.setup {
+    sources = {
+      { name = 'tags' },
+      -- more sources
+    }
+  }
+  end
+}
   use {
         'nvim-lua/completion-nvim'
   }
