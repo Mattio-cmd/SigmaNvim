@@ -1,6 +1,7 @@
 #  Sigma Nvim
 ###### in lua
 <img align="center" src="https://user-images.githubusercontent.com/78447457/160265772-6a97f72a-5bf1-4668-aa7f-b5e70dccc6ca.png">
+
 # This is a WIP. Not complete (yet)
 
 ## Plugins
@@ -11,7 +12,7 @@
 - kanagawa
   * [`rebelot/kanagawa.nvim`](https://github.com/rebelot/kanagawa.nvim)
 - nerdcommenter
-  * [`preservim/nerdcommenter`](https://github.com/preservim/nerdcomenter)
+  * [`preservim/nerdcommenter`](https://github.com/preservim/nerdcommenter)
 - lualine.nvim
   * [`nvim-lualine/lualine.nvim`](https://github.com/nvim-lualine/lualine.nvim)
 - presence.nvim (altough this is just for discord users)
@@ -84,9 +85,9 @@
 - Wallpapers to match the colorschemes
 
 ## TO-DO
-[x] Have a clean codebase <br>
-[x] Optimize it <br>
-[ ] Make the REAME better xd <br>
-[x] Lower start-up time to the minimum possible <br>
-[x] Add a logo or something to it <br>
-  [ ] Make the logo better <br>
+- [x] Have a clean codebase <br>
+- [x] Optimize it <br>
+- [ ] Make the REAME better xd <br>
+- [x] Lower start-up time to the minimum possible <br>
+- [x] Add a logo or something to it <br>
+ * [ ] Make the logo better <br>
