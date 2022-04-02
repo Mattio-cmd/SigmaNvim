@@ -5,7 +5,7 @@ require'lspconfig'.clangd.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.eslint.setup{}
 --require'lspconfig'.racket_langserver.setup{}
---require'lspconfig'.dartls.setup{}
+require'lspconfig'.dartls.setup{}
 require'lspconfig'.flow.setup{}
 require'lspconfig'.sumneko_lua.setup {
   settings = {

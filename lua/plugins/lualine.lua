@@ -11,8 +11,8 @@ end
 require'lualine'.setup{
 options = {
     icons_enabled = true,
-    --theme = 'kanagawa',
-    theme = 'gruvbox-material',
+    theme = 'kanagawa',
+    --theme = 'gruvbox-material',
     --component_separators = { left = '', right = ''},
     --section_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},  --  

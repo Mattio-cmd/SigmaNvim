@@ -31,26 +31,26 @@ require('packer').startup(function()
 
   -- presence.nvim
   use {
-  'andweeb/presence.nvim'
+    'andweeb/presence.nvim'
   }
 
   -- devicons
   use {
     'kyazdani42/nvim-web-devicons'
-    }
+  }
   -- nvim-tree
   use {
     'kyazdani42/nvim-tree.lua'
-    }
+  }
   -- telescope
   use {
        'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
-    }
+  }
   -- autopairs
   use {
     'windwp/nvim-autopairs',
-    }
+  }
 
   use { --Preview for markdown files
     'davinche/godown-vim',
@@ -60,7 +60,7 @@ require('packer').startup(function()
     config = function ()
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
-}
+  }
 
   use {
     'lukas-reineke/indent-blankline.nvim',
@@ -75,7 +75,7 @@ require('packer').startup(function()
   use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
-    }
+  }
   use {
         'norcalli/nvim-colorizer.lua'
   }
@@ -90,25 +90,7 @@ require('packer').startup(function()
   }
   use {
   'hrsh7th/nvim-cmp',
-  requires = {
-    {
-      'quangnguyen30192/cmp-nvim-tags',
-      -- if you want the sources is available for some file types
-      ft = {
-        'c',
-        'dart'
-      }
-    }
-  },
-  config = function ()
-    require'cmp'.setup {
-    sources = {
-      { name = 'tags' },
-      -- more sources
-    }
   }
-  end
-}
   use {
         'nvim-lua/completion-nvim'
   }
@@ -124,6 +106,13 @@ require('packer').startup(function()
 
   use {
     'akinsho/flutter-tools.nvim'
+  }
+
+  -- Debugger
+  use {
+    'mfussenegger/nvim-dap',
+    requires='mfussenegger/nvim-dap-python',
+    require('dap-python').setup('$HOME/.virtualenvs/debugpy/bin/python'),
   }
 
   -- kanagawa (colorscheme)

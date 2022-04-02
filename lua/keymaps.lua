@@ -59,7 +59,8 @@ nnoremap <C-x> :bw<cr>
 " Coc definitions
 map <leader>gd <Plug>(coc-definition)
 nmap <leader>dr <Plug>(coc-references)
-nmap <C-p> :Telescope git_files<CR>
+nnoremap <C-p> :Telescope find_files <CR>
+nmap <C-g> :Telescope git_files<CR>
 " For the terminal
 noremap ,, :split<CR> :res 10<CR> :term<CR>
 " For the BIG terminal
@@ -105,6 +106,7 @@ nnoremap fq :FlutterQuit<CR>
 nnoremap fr :FlutterReload<CR>
 nnoremap frr :FlutterRestart<CR>
 
+" For bufferline
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
 nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
 nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
@@ -114,4 +116,11 @@ nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
 nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
 nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
 nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
+
+
+" For dap-nvim
+nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
+nnoremap <silent> <leader>df :lua require('dap-python').test_class()<CR>
+vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
+
 ]]
