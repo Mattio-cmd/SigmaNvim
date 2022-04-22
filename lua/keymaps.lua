@@ -91,8 +91,10 @@ vnoremap  <C-o> :ReplSend<CR>
 nnoremap <silent> <S-j> :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> <S-k> :Lspsaga diagnostic_jump_prev<CR>
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+"1nnoremap <silent> hd :Lspsaga hover_doc<CR>
 nnoremap <silent> gp :Lspsaga preview_definition<CR>
 nnoremap <silent> gc :Lspsaga code_action<CR>
+nnoremap ;; :SymbolsOutline<CR>
 " For the skeletons
 " Read an empty HTML template and move cursor to title
 nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>3jwf>a
@@ -100,7 +102,7 @@ nnoremap ,c :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<TAB>
 nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>2j6li
 
 " For flutter development
-nnoremap ;; :FlutterOutlineToggle<CR>
+nnoremap ;f :FlutterOutlineToggle<CR>
 nnoremap ff :FlutterRun<CR>
 nnoremap fq :FlutterQuit<CR>
 nnoremap fr :FlutterReload<CR>

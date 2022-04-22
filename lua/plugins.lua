@@ -67,8 +67,16 @@ require('packer').startup(function()
   }
 
   use {
+    'michaelb/sniprun',
+    run = 'bash ./install.sh',
+  }
+
+  use {
      'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
+  }
+  use {
+    'zsugabubus/crazy8.nvim',
   }
 
   -- treesitter
@@ -108,12 +116,6 @@ require('packer').startup(function()
     'akinsho/flutter-tools.nvim'
   }
 
-  -- Debugger
-  use {
-    'mfussenegger/nvim-dap',
-    requires='mfussenegger/nvim-dap-python',
-    require('dap-python').setup('$HOME/.virtualenvs/debugpy/bin/python'),
-  }
 
   -- kanagawa (colorscheme)
   use {

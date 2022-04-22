@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/completion-nvim",
     url = "https://github.com/nvim-lua/completion-nvim"
   },
+  ["crazy8.nvim"] = {
+    loaded = true,
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/crazy8.nvim",
+    url = "https://github.com/zsugabubus/crazy8.nvim"
+  },
   ["dart-vim-plugin"] = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
@@ -165,11 +170,6 @@ _G.packer_plugins = {
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -204,6 +204,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
+  },
+  sniprun = {
+    loaded = true,
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/sniprun",
+    url = "https://github.com/michaelb/sniprun"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,
