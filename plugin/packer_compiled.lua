@@ -90,11 +90,6 @@ _G.packer_plugins = {
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/completion-nvim",
     url = "https://github.com/nvim-lua/completion-nvim"
   },
-  ["crazy8.nvim"] = {
-    loaded = true,
-    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/crazy8.nvim",
-    url = "https://github.com/zsugabubus/crazy8.nvim"
-  },
   ["dart-vim-plugin"] = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",

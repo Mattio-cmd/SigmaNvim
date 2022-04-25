@@ -66,7 +66,7 @@ require('packer').startup(function()
     'lukas-reineke/indent-blankline.nvim',
   }
 
-  use {
+  use { -- TODO: Configure this
     'michaelb/sniprun',
     run = 'bash ./install.sh',
   }
@@ -74,9 +74,6 @@ require('packer').startup(function()
   use {
      'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
-  }
-  use {
-    'zsugabubus/crazy8.nvim',
   }
 
   -- treesitter

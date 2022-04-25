@@ -12,13 +12,13 @@ require'lualine'.setup{
 options = {
     icons_enabled = true,
 		globalstatus = true,
-    theme = 'kanagawa',
-    --theme = 'gruvbox-material',
+    --theme = 'kanagawa',
+    theme = 'gruvbox-material',
     --component_separators = { left = '', right = ''},
     --section_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},  --  
+    --section_separators = { left = '', right = ''},  --  
     component_separators = { left = '', right = ''},
-    --section_separators = { left = '', right = ''},  --  
+    section_separators = { left = ' ', right = ''},  --  
     disabled_filetypes = {},
     always_divide_middle = true,
   },
