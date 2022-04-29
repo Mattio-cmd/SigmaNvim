@@ -72,6 +72,10 @@ require('packer').startup(function()
   }
 
   use {
+    'L3MON4D3/LuaSnip',
+  }
+
+  use {
      'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
   }
