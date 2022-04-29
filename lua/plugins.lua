@@ -16,14 +16,17 @@ require('packer').startup(function()
 	use { -- Easily speed up your neovim startup time!. A faster version of filetype.vim
 		'nathom/filetype.nvim'
   	}
-   -- colorscheme
+
+  -- colorscheme
   use {
     'sainnhe/gruvbox-material'
     }
-    -- nerdcomenter
+
+  -- nerdcomenter
   use {
     'preservim/nerdcommenter'
   }
+
   -- lualine
   use {
     'nvim-lualine/lualine.nvim',
@@ -38,15 +41,18 @@ require('packer').startup(function()
   use {
     'kyazdani42/nvim-web-devicons'
   }
+
   -- nvim-tree
   use {
     'kyazdani42/nvim-tree.lua'
   }
+
   -- telescope
   use {
        'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
   }
+
   -- autopairs
   use {
     'windwp/nvim-autopairs',
@@ -55,6 +61,7 @@ require('packer').startup(function()
   use { --Preview for markdown files
     'davinche/godown-vim',
   }
+
   use {
     'goolord/alpha-nvim',
     config = function ()
@@ -72,10 +79,6 @@ require('packer').startup(function()
   }
 
   use {
-    'L3MON4D3/LuaSnip',
-  }
-
-  use {
      'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
   }
@@ -85,21 +88,27 @@ require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
   }
+
   use {
         'norcalli/nvim-colorizer.lua'
   }
+
   use {
         'neovim/nvim-lspconfig'
   }
+
   use {
         'hrsh7th/cmp-nvim-lsp'
   }
+
   use {
     'simrat39/symbols-outline.nvim',
   }
+
   use {
   'hrsh7th/nvim-cmp',
   }
+
   use {
         'nvim-lua/completion-nvim'
   }
