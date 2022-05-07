@@ -35,6 +35,14 @@ require('bufferline').setup {
 			-- options function , text_" "h always_show_bufferline = false
 			{filetype = "NvimTree", text = "Explorer", text_align = "left"},
 		},
+      custom_areas = {
+      right = function()
+         return {
+            { text = "%@Toggle_theme@" .. vim.g.toggle_theme_icon .. "%X" },
+            { text = "%@Quit_vim@  %X" },
+         }
+      end,
+   },
 	},
 
 	highlights = {

@@ -11,7 +11,7 @@ function day() {
 
 while true
 do
-  if [[ `date +%H` -gt 17 || `date +%H` -lt 7 ]]
+  if [[ `date +%H` -gt 17 || `date +%H` -lt 7 ]] # Change this depending on where you live
   then
     night
   else

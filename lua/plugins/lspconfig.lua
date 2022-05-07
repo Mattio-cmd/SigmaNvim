@@ -2,7 +2,10 @@
 vim.lsp.set_log_level("debug")
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.hls.setup{} -- Haskell lsp
+require'lspconfig'.tsserver.setup{
+    hostInfo = "neovim",
+}
 require'lspconfig'.eslint.setup{}
 --require'lspconfig'.racket_langserver.setup{}
 require'lspconfig'.dartls.setup{}
