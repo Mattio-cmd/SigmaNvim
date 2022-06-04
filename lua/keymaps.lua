@@ -26,7 +26,7 @@ nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 " Markdown Preview
-nnoremap <S-p> :GodownToggle<CR>
+nnoremap <S-p> :MarkdownPreviewToggle<CR>
 " Alternate way to save
 nnoremap <C-s> :w<CR> " Alternate way to quit and save nnoremap
 nnoremap <C-q> :wq!<CR> " Alternative way to quit
@@ -91,7 +91,7 @@ vnoremap  <C-o> :ReplSend<CR>
 nnoremap <silent> <S-j> :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> <S-k> :Lspsaga diagnostic_jump_prev<CR>
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
-"1nnoremap <silent> hd :Lspsaga hover_doc<CR>
+nnoremap <silent> dh :Lspsaga hover_doc<CR>
 nnoremap <silent> gp :Lspsaga preview_definition<CR>
 nnoremap <silent> gc :Lspsaga code_action<CR>
 nnoremap ;; :SymbolsOutline<CR>
