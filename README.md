@@ -4,6 +4,14 @@
 
 # This is a WIP. Not complete (yet)
 
+## Showcase
+![dashboard1](./images/dashboard.png)
+<sub>This is kanagawa theme<sub/>
+
+![lsp](./images/lsp-show.png)
+
+### Theme changer depending on time of the day
+
 ## Plugins
 - packer.nvim
   * [`wbthomason/packer.nvim`](https://github.com/wbthomason/packer.nvim)
@@ -26,10 +34,6 @@
     * It requieres [`nvim-lua/plenary.nvim`](https://github.com/nvim-lua/plenary.nvim)
 - nvim-autopairs
   * [```windwp/nvim-autopairs```](https://github.com/windwp/nvim-autopairs)
-- flutter-tools.nvim
-  * [`akinsho/flutter-tools.nvim`](https://github.com/akinsho/flutter-tools.nvim)
-- dart-vim-plugin
-  * [`dart-lang/dart-vim-plugin`](https://github.com/dart-lang/dart-vim-plugin)
 - lspsaga.nvim
   * [`tami5/lspsaga.nvim`](https://github.com/tami5/lspsaga.nvim)
 - lspkind-nvim
@@ -56,12 +60,26 @@
   * [`lukas-reineke/indent-blankline.nvim`](https://github.com/lukas-reineke/indent-blankline.nvim)
 - goolord/alpha-nvim
   * [`goolord/alpha-nvim`](https://github.com/goolord/alpha-nvim)
-- godown-vim
-  * [`davinche/godown-vim`](https://github.com/davinche/godown-vim)
+- markdown-preview.nvim
+  * [`iamcco/markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim)
 - impatient.nvim
   * [`lewis6991/impatient.nvim`](https://github.com/lewis6991/impatient.nvim)
 - filetype.nvim
   * [`nathom/filetype.nvim`](https://github.com/nathom/filetype.nvim)
+- wildermenu.nvim
+  * [`'gelguy/wilder.nvim'`](https://github.com/gelguy/wilder.nvim)
+
+### Plugins disabled by default
+- flutter-tools.nvim
+  * [`akinsho/flutter-tools.nvim`](https://github.com/akinsho/flutter-tools.nvim)
+- dart-vim-plugin
+  * [`dart-lang/dart-vim-plugin`](https://github.com/dart-lang/dart-vim-plugin)
+- LuaSnip
+  * [`L3MON4D3/LuaSnip`](https://github.com/L3MON4D3/LuaSnip)
+- zepl.vim
+  * [`axvr/zepl.vim`](https://github.com/axvr/zepl.vim)
+- yuck.vim
+  * [`elkowar/yuck.vim`](https://github.com/elkowar/yuck.vim)
 
 ##  Important remaps
 - ```leader key is the space bar```

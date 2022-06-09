@@ -94,7 +94,7 @@ require('packer').startup(function()
   -- treesitter
   use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        run = ':TSUpdate',
   }
 
   use {
@@ -107,6 +107,13 @@ require('packer').startup(function()
 
   use {
         'hrsh7th/cmp-nvim-lsp'
+  }
+
+  use {
+    'gelguy/wilder.nvim',
+    config = function()
+    -- config goes here
+    end,
   }
 
   use {
@@ -126,13 +133,6 @@ require('packer').startup(function()
   use {
         'tami5/lspsaga.nvim'
   }
-  use {
-    'dart-lang/dart-vim-plugin'
-  }
-
-  use {
-    'akinsho/flutter-tools.nvim'
-  }
 
 
   -- kanagawa (colorscheme)
@@ -141,6 +141,14 @@ require('packer').startup(function()
   }
 
   --== Plugins im not currently using ==--
+
+  --use { -- For dart development
+    --'dart-lang/dart-vim-plugin'
+  --}
+
+  --use {
+    --'akinsho/flutter-tools.nvim'
+  --}
 
   --use {
     --'L3MON4D3/LuaSnip'
