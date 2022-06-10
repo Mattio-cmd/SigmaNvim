@@ -62,7 +62,7 @@ nmap <leader>dr <Plug>(coc-references)
 nnoremap <C-p> :Telescope find_files <CR>
 nmap <C-g> :Telescope git_files<CR>
 " For the terminal
-noremap ,, :split<CR> :res 10<CR> :term<CR>
+noremap ,, :split<CR> :res 5<CR> :term<CR>
 " For the BIG terminal
 noremap <leader>p :split<CR> :resize 60<CR> :term<CR>
 " For spliting windows
