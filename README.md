@@ -11,6 +11,7 @@
 ![lsp](./images/lsp-show.png)
 
 ### Theme changer depending on time of the day
+- Done with shell scripting
 
 ## Plugins
 - packer.nvim
@@ -106,6 +107,6 @@
 - [x] Have a clean codebase <br>
 - [x] Optimize it <br>
 - [ ] Make the REAME better xd <br>
-- [x] Lower start-up time to the minimum possible <br>
+- [ ] Lower start-up time to the minimum possible <br>
 - [x] Add a logo or something to it <br>
  * [ ] Make the logo better <br>
