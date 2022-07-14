@@ -1,9 +1,11 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
+
 local function footer()
 	local datetime = os.date("%I:%M:%p | %d-%m-%Y")
 	return datetime
 end
+
 dashboard.section.footer.val = footer()
 alpha.setup(dashboard.opts)
 

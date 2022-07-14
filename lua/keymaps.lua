@@ -38,15 +38,16 @@ nnoremap <C-c> <Esc>
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
+
 " For keeping search results centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
+
 " For NvimTree
 nnoremap <C-f> :NvimTreeToggle<CR>
 nnoremap <leader>l <cmd>call setqflist([])<cr>
-" For fzf
-nnoremap <C-o> :Files<CR>
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -59,8 +60,11 @@ nnoremap <C-x> :bw<cr>
 " Coc definitions
 map <leader>gd <Plug>(coc-definition)
 nmap <leader>dr <Plug>(coc-references)
+
 nnoremap <C-p> :Telescope find_files <CR>
+nnoremap <C-o> :Telescope live_grep<CR>
 nmap <C-g> :Telescope git_files<CR>
+
 " For the terminal
 noremap ,, :split<CR> :res 5<CR> :term<CR>
 " For the BIG terminal
@@ -130,5 +134,11 @@ nnoremap sr :SnipReset<CR> :SnipClose<CR>
 nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
 nnoremap <silent> <leader>df :lua require('dap-python').test_class()<CR>
 vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
+
+" Compile document, be it groff/LaTeX/markdown/etc.
+	"map <leader>c :w! \| !compiler "<c-r>%"<CR>
+
+" Open corresponding .pdf/.html or preview
+	"map <leader>p :!opout <c-r>%<CR><CR>
 
 ]]

@@ -34,6 +34,7 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set autochdir                           " Your working directory will always be the same as your working directory
 set exrc
+set cmdwinheight=1
 set wildmenu
 set nolist
 set wildmode=longest:full,full

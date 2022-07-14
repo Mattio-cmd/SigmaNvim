@@ -90,6 +90,7 @@ cmd([[
   highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
 ]])
 
+
 -- Nvim-lsp
 -- Floating diagnostics
  --cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
