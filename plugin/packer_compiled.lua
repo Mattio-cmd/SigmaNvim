@@ -130,10 +130,20 @@ _G.packer_plugins = {
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  neovim = {
+    loaded = true,
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/meliora-theme/neovim"
   },
   nerdcommenter = {
     loaded = true,

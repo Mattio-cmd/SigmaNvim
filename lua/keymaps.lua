@@ -107,6 +107,7 @@ nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>2j6li
 nnoremap ,m :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.make<CR>j4li
 nnoremap ,t :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.tex<CR>2j9li
 nnoremap ,d :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.md<CR>1j6l<S-a><Space>
+nnoremap ,a :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.ack.c<CR>
 
 " For flutter development
 nnoremap ;f :FlutterOutlineToggle<CR>
