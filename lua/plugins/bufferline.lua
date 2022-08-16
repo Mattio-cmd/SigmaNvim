@@ -46,32 +46,32 @@ require('bufferline').setup {
 	},
 
 	highlights = {
-		fill = {guibg = {highlight = "BufferLineFill", attribute = "bg"}},
+		fill = {bg = {highlight = "BufferLineFill", attribute = "bg"}},
 		background = { -- current tab
-			guifg = {highlight = "BufferCurrent", attribute = "fg"},
-			guibg = {highlight = "BufferCurrent", attribute = "bg"},
+			fg = {highlight = "BufferCurrent", attribute = "fg"},
+			bg = {highlight = "BufferCurrent", attribute = "bg"},
 		},
-		separator = {guifg = {highlight = "BufferSeparator", attribute = "fg"}},
+		separator = {fg = {highlight = "BufferSeparator", attribute = "fg"}},
 		separator_selected = {
-			guifg = {highlight = "BufferSeparatorSelected", attribute = "fg"},
+			fg = {highlight = "BufferSeparatorSelected", attribute = "fg"},
 		},
 		close_button_selected = {
-			guifg = {highlight = "BufferCloseButtonSelected", attribute = "fg"},
-			guibg = {highlight = "BufferCloseButtonSelected", attribute = "bg"},
+			fg = {highlight = "BufferCloseButtonSelected", attribute = "fg"},
+			bg = {highlight = "BufferCloseButtonSelected", attribute = "bg"},
 		},
 		duplicate = {
-			guifg = {highlight = "BufferCurrentSign", attribute = "fg"},
-			guibg = {highlight = "BufferLineFill", attribute = "bg"},
+			fg = {highlight = "BufferCurrentSign", attribute = "fg"},
+			bg = {highlight = "BufferLineFill", attribute = "bg"},
 		},
 		duplicate_selected = {
-			guifg = {highlight = "BufferCurrentSign", attribute = "fg"},
+			fg = {highlight = "BufferCurrentSign", attribute = "fg"},
 		},
 		modified = {
-			guifg = {highlight = "BufferCurrentSign", attribute = "fg"},
-			guibg = {highlight = "BufferLineFill", attribute = "bg"},
+			fg = {highlight = "BufferCurrentSign", attribute = "fg"},
+			bg = {highlight = "BufferLineFill", attribute = "bg"},
 		},
 		modified_selected = {
-			guifg = {highlight = "BufferCurrentSign", attribute = "fg"},
+			fg = {highlight = "BufferCurrentSign", attribute = "fg"},
 		},
 		-- duplicate_visible = {
 		-- },

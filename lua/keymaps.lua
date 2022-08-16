@@ -131,6 +131,9 @@ nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 vnoremap sn :SnipRun <CR>
 nnoremap sr :SnipReset<CR> :SnipClose<CR>
 
+" make
+nnoremap <silent> <S-m> :!cd ..;make;./bin/main <CR>
+
 " For dap-nvim
 nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
 nnoremap <silent> <leader>df :lua require('dap-python').test_class()<CR>
