@@ -15,6 +15,12 @@ release: CFLAGS=-Wall -O2 -DNDEBUG
 release: clean
 release: $(BIN)
 
+libmycode.o: $(SRC)/funcs.c $(SRC)/funcs.h
+	$(CC) -o $(OBJ)/libmycode.o -c $(SRC)/funcs.c
+
+libmycode.so: $(SRC)/funcs.c $(SRC)/funcs.h
+	$(CC) -fPIC -shared -o $(OBJ)/$@ -c $(SRC)/funcs.c -lc
+
 $(BIN): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@
 

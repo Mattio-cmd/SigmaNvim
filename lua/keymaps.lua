@@ -101,7 +101,7 @@ nnoremap <silent> gc :Lspsaga code_action<CR>
 nnoremap ;; :SymbolsOutline<CR>
 " For the skeletons
 " Read an empty HTML template and move cursor to title
-nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>3jwf>a
+nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>4jwf>a
 nnoremap ,c :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<TAB>
 nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>2j6li
 nnoremap ,m :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.make<CR>j4li
@@ -133,6 +133,9 @@ nnoremap sr :SnipReset<CR> :SnipClose<CR>
 
 " make
 nnoremap <silent> <S-m> :!cd ..;make;./bin/main <CR>
+
+" find and replace idk
+"nnoremap <> :%s/x/y/g
 
 " For dap-nvim
 nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>

@@ -1,6 +1,7 @@
 local cmd = vim.cmd
 local exec = vim.api.nvim_exec
 
+
 local NoWhitespace = exec(
     [[
     function! NoWhitespace()
