@@ -1,16 +1,36 @@
 -- lspconfig.rc
 vim.lsp.set_log_level("debug")
 require'lspconfig'.pyright.setup{}
+
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+require'lspconfig'.html.setup{
+    capabilities = capabilities,
+      configurationSection = { "html", "css", "javascript" },
+  embeddedLanguages = {
+    css = true,
+    javascript = true
+  },
+  provideFormatter = true
+}
+
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.rls.setup{}
 --require'lspconfig'.hls.setup{} -- Haskell lsp
 --require'lspconfig'.tsserver.setup{
     --hostInfo = "neovim",
 --}
-require'lspconfig'.eslint.setup{}
+require'lspconfig'.eslint.setup{
+    capabilities = capabilities,
+}
+
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
 --require'lspconfig'.racket_langserver.setup{}
 --require'lspconfig'.dartls.setup{}
-require'lspconfig'.flow.setup{}
+--require'lspconfig'.flow.setup{}
 require'lspconfig'.sumneko_lua.setup {
   --settings = {
     --Lua = {
