@@ -55,6 +55,6 @@ augroup project
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 augroup END
 
-let g:markdown_fenced_languages = ['typescript', 'c']
+let g:markdown_fenced_languages = ['typescript', 'c', 'python', 'cpp']
 ]]
 

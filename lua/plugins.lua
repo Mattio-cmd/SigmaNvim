@@ -62,12 +62,6 @@ require('packer').startup(function()
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-  --use({
-    --"iamcco/markdown-preview.nvim",
-    --run = "cd app && npm install",
-    --setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-    --ft = { "markdown" },
-  --})
 
 
   use {
@@ -111,13 +105,6 @@ require('packer').startup(function()
   }
 
   use {
-    'gelguy/wilder.nvim',
-    config = function()
-    -- config goes here
-    end,
-  }
-
-  use {
     'simrat39/symbols-outline.nvim',
   }
 
@@ -136,6 +123,20 @@ require('packer').startup(function()
   }
 
 
+  --use({
+  --"folke/noice.nvim",
+  --event = "VimEnter",
+  --config = function()
+    --require("noice").setup()
+  --end,
+  --requires = {
+    ---- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    --"MunifTanjim/nui.nvim",
+    --"rcarriga/nvim-notify",
+    --"hrsh7th/nvim-cmp",
+    --}
+--})
+
   -- kanagawa (colorscheme)
   use {
     'rebelot/kanagawa.nvim'
@@ -146,7 +147,15 @@ require('packer').startup(function()
     requires = {'rktjmp/lush.nvim'}
   }
 
+  use {
+    'elkowar/yuck.vim'
+  }
+
   --== Plugins im not currently using ==--
+
+  --use {
+    --'shaunsingh/oxocarbon.nvim', run = './install.sh'
+  --}
 
   --use { -- For dart development
     --'dart-lang/dart-vim-plugin'
@@ -160,9 +169,6 @@ require('packer').startup(function()
     --'L3MON4D3/LuaSnip'
   --}
 
-  --use {
-    --'elkowar/yuck.vim'
-  --}
 
   --use {
     --'axvr/zepl.vim'

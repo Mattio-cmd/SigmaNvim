@@ -3,6 +3,7 @@
     "Lua.diagnostics.globals": [
         "vim",
         "packer_bootstrap",
-        "use"
+        "use",
+        "config"
     ]
 }

@@ -14,14 +14,14 @@ require 'meliora'.setup({
         booleans = 'NONE',
         properties = 'NONE',
         types = 'NONE',
-        operators = 'NONE',
+        operators = 'bold',
     },
     plugins = {
         cmp = true,
         indent_blankline = true,
         nvim_tree = {
             enabled = true,
-            show_root = false,
+            show_root = true,
         },
         telescope = {
             enabled = true,
@@ -31,6 +31,4 @@ require 'meliora'.setup({
 })
 
 vim.o.termguicolors = true
-vim.g.onedark_terminal_italics = 2
 vim.cmd [[colorscheme meliora]]
-

@@ -101,7 +101,7 @@ nnoremap <silent> gc :Lspsaga code_action<CR>
 nnoremap ;; :SymbolsOutline<CR>
 " For the skeletons
 " Read an empty HTML template and move cursor to title
-nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>5jwf>a
+nnoremap ,h :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>6jwf>a
 nnoremap ,c :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<TAB>
 nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>2j6li
 nnoremap ,m :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.make<CR>j4li

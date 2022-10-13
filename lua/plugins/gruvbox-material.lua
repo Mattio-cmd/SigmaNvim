@@ -7,7 +7,3 @@ vim.cmd [[
 ]]
 vim.cmd [[colorscheme gruvbox-material]]
 
---vim.cmd [[
-	--set background=dark
---]]
---vim.cmd [[colorscheme kanagawa]]

@@ -16,11 +16,12 @@ require'lspconfig'.html.setup{
 }
 
 require'lspconfig'.clangd.setup{}
-require'lspconfig'.rls.setup{}
 --require'lspconfig'.hls.setup{} -- Haskell lsp
 --require'lspconfig'.tsserver.setup{
     --hostInfo = "neovim",
 --}
+
+require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.eslint.setup{
     capabilities = capabilities,
 }
