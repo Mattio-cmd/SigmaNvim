@@ -135,6 +135,9 @@ nnoremap sr :SnipReset<CR> :SnipClose<CR>
 " make
 nnoremap <silent> <S-m> :!cd ..;make;./bin/main <CR>
 
+" compile LaTeX to pdf
+nnoremap <silent> <S-z> :!pdflatex main.tex <CR> :!pdflatex main.tex <CR> <CR>
+
 " find and replace idk
 "nnoremap <> :%s/x/y/g
 
