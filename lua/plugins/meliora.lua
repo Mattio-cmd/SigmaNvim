@@ -16,6 +16,16 @@ require 'meliora'.setup({
         types = 'NONE',
         operators = 'bold',
     },
+
+    transparent_background = {
+        enabled = true,
+        floating_windows = false,
+        telescope = true,
+        file_tree = true,
+        cursor_line = true,
+        status_line = false,
+    },
+
     plugins = {
         cmp = true,
         indent_blankline = true,

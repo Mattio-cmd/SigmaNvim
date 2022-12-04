@@ -19,8 +19,8 @@ nnoremap <M-l>    :vertical resize +2<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 " Easy CAPS
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
+"inoremap <c-u> <ESC>viwUi
+"nnoremap <c-u> viwU<Esc>
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
@@ -146,6 +146,9 @@ nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
 nnoremap <silent> <leader>df :lua require('dap-python').test_class()<CR>
 vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
 
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 " Compile document, be it groff/LaTeX/markdown/etc.
 	"map <leader>c :w! \| !compiler "<c-r>%"<CR>
 
@@ -153,3 +156,4 @@ vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<C
 	"map <leader>p :!opout <c-r>%<CR><CR>
 
 ]]
+
