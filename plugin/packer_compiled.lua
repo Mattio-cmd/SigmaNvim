@@ -145,10 +145,10 @@ _G.packer_plugins = {
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
-  neovim = {
+  ["mellifluous.nvim"] = {
     loaded = true,
-    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/meliora-theme/neovim"
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/mellifluous.nvim",
+    url = "https://github.com/ramojus/mellifluous.nvim"
   },
   nerdcommenter = {
     loaded = true,

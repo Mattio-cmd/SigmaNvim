@@ -142,10 +142,10 @@ require('packer').startup(function()
     'rebelot/kanagawa.nvim'
   }
 
- use {
-    'meliora-theme/neovim',
-    requires = {'rktjmp/lush.nvim'}
-  }
+use({
+    'ramojus/mellifluous.nvim',
+    requires = { 'rktjmp/lush.nvim' },
+})
 
   use {
     'elkowar/yuck.vim'
