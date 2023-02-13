@@ -32,7 +32,7 @@ require'lspconfig'.cssls.setup {
 --require'lspconfig'.racket_langserver.setup{}
 --require'lspconfig'.dartls.setup{}
 --require'lspconfig'.flow.setup{}
-require'lspconfig'.sumneko_lua.setup {
+--require'lspconfig'.sumneko_lua.setup {
   --settings = {
     --Lua = {
       --runtime = {
@@ -55,7 +55,7 @@ require'lspconfig'.sumneko_lua.setup {
       --},
     --},
   --},
-}
+--}
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
 
