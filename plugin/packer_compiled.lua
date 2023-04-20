@@ -200,10 +200,10 @@ _G.packer_plugins = {
     path = "/home/mattio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["presence.nvim"] = {
+  ["rose-pine"] = {
     loaded = true,
-    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
+    path = "/home/mattio/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
   },
   sniprun = {
     loaded = true,

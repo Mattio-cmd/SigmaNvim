@@ -33,9 +33,9 @@ require('packer').startup(function()
   }
 
   -- presence.nvim
-  use {
-    'andweeb/presence.nvim'
-  }
+  --use {
+    --'andweeb/presence.nvim'
+  --}
 
   -- devicons
   use {
@@ -121,6 +121,11 @@ require('packer').startup(function()
   use {
         'tami5/lspsaga.nvim'
   }
+
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+})
 
 
   --use({

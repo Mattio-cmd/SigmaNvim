@@ -21,6 +21,32 @@ require'lspconfig'.clangd.setup{}
     --hostInfo = "neovim",
 --}
 
+require'lspconfig'.texlab.setup{
+    texlab = {
+    auxDirectory = ".",
+    bibtexFormatter = "texlab",
+    build = {
+      args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+      executable = "latexmk",
+      forwardSearchAfter = false,
+      onSave = false
+    },
+    chktex = {
+      onEdit = false,
+      onOpenAndSave = false
+    },
+    diagnosticsDelay = 300,
+    formatterLineLength = 80,
+    forwardSearch = {
+      args = {}
+    },
+    latexFormatter = "latexindent",
+    latexindent = {
+      modifyLineBreaks = false
+    }
+  }
+}
+
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.eslint.setup{
     capabilities = capabilities,

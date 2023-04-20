@@ -106,6 +106,7 @@ nnoremap ,c :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<TAB>
 nnoremap ,f :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>2j6li
 nnoremap ,m :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.make<CR>j4li
 nnoremap ,t :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.tex<CR>2j9li
+nnoremap ,ti :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.img.tex<CR>2j40li
 nnoremap ,d :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.md<CR>1j6l<S-a><Space>
 nnoremap ,a :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.ack.c<CR>
 nnoremap ,p :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.flask.py<CR>
@@ -148,6 +149,10 @@ vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<C
 
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+
+" TeX
+nnoremap <silent> tc :!pdflatex -synctex=1 -interaction=nonstopmode --shell-escape main.tex<CR> <CR>
+
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 	"map <leader>c :w! \| !compiler "<c-r>%"<CR>
