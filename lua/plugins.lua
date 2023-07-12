@@ -152,6 +152,12 @@ use({
     requires = { 'rktjmp/lush.nvim' },
 })
 
+use {
+    'simrat39/symbols-outline.nvim',
+    require("symbols-outline").setup(),
+  }
+
+
   use {
     'elkowar/yuck.vim'
   }

@@ -111,12 +111,6 @@ nnoremap ,d :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.md<CR>1j6l<S-a><S
 nnoremap ,a :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.ack.c<CR>
 nnoremap ,p :-1read $HOME/.config/nvim/lua/skeletons/.skeleton.flask.py<CR>
 
-" For flutter development
-nnoremap ;f :FlutterOutlineToggle<CR>
-nnoremap ff :FlutterRun<CR>
-nnoremap fq :FlutterQuit<CR>
-nnoremap fr :FlutterReload<CR>
-nnoremap frr :FlutterRestart<CR>
 
 " For bufferline
 nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
