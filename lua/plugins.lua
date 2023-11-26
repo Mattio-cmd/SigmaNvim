@@ -13,14 +13,6 @@ require('packer').startup(function()
 		'lewis6991/impatient.nvim' --
 	}
 
-	use { -- Easily speed up your neovim startup time!. A faster version of filetype.vim
-		'nathom/filetype.nvim'
-  	}
-
-  -- colorscheme
-  use {
-    'sainnhe/gruvbox-material'
-    }
 
   -- nerdcomenter
   use {
@@ -32,10 +24,6 @@ require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
   }
 
-  -- presence.nvim
-  --use {
-    --'andweeb/presence.nvim'
-  --}
 
   -- devicons
   use {
@@ -69,6 +57,11 @@ require('packer').startup(function()
     config = function ()
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
+  }
+
+-- debugger
+  use {
+    'mfussenegger/nvim-dap',
   }
 
   use {
@@ -105,10 +98,6 @@ require('packer').startup(function()
   }
 
   use {
-    'simrat39/symbols-outline.nvim',
-  }
-
-  use {
   'hrsh7th/nvim-cmp',
   }
 
@@ -122,35 +111,13 @@ require('packer').startup(function()
         'tami5/lspsaga.nvim'
   }
 
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-})
 
-
-  --use({
-  --"folke/noice.nvim",
-  --event = "VimEnter",
-  --config = function()
-    --require("noice").setup()
-  --end,
-  --requires = {
-    ---- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    --"MunifTanjim/nui.nvim",
-    --"rcarriga/nvim-notify",
-    --"hrsh7th/nvim-cmp",
-    --}
---})
 
   -- kanagawa (colorscheme)
   use {
     'rebelot/kanagawa.nvim'
   }
 
-use({
-    'ramojus/mellifluous.nvim',
-    requires = { 'rktjmp/lush.nvim' },
-})
 
 use {
     'simrat39/symbols-outline.nvim',
@@ -162,10 +129,55 @@ use {
     'elkowar/yuck.vim'
   }
 
+  use {
+    'lervag/vimtex'
+  }
+
+  use {
+    'L3MON4D3/LuaSnip',
+    	-- follow latest release.
+  	tag = "v2.1", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+  	-- install jsregexp (optional!:).
+  	run = "make install_jsregexp"
+  }
+
+  use {
+    'KeitaNakamura/tex-conceal.vim'
+  }
+
   --== Plugins im not currently using ==--
+
+--use({
+  --"folke/noice.nvim",
+  --event = "VimEnter",
+  --config = function()
+  --require("noice").setup()
+  --end,
+  --requires = {
+  ---- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --"MunifTanjim/nui.nvim",
+  --"rcarriga/nvim-notify",
+  --"hrsh7th/nvim-cmp",
+  --}
+--})
+
+  -- colorscheme
+  --use {
+  --'sainnhe/gruvbox-material'
+  --}
 
   --use {
     --'shaunsingh/oxocarbon.nvim', run = './install.sh'
+  --}
+
+  --use({
+    --'ramojus/mellifluous.nvim',
+    --requires = { 'rktjmp/lush.nvim' },
+  --})
+
+  --presence.nvim
+  --use {
+    --'andweeb/presence.nvim'
   --}
 
   --use { -- For dart development
@@ -176,9 +188,6 @@ use {
     --'akinsho/flutter-tools.nvim'
   --}
 
-  --use {
-    --'L3MON4D3/LuaSnip'
-  --}
 
 
   --use {

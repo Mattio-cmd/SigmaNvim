@@ -147,6 +147,14 @@ nnoremap <C-u> <C-u>zz
 " TeX
 nnoremap <silent> tc :!pdflatex -synctex=1 -interaction=nonstopmode --shell-escape main.tex<CR> <CR>
 
+"" nvim-dap
+nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint() <CR>
+nnoremap <silent> <leader>cd :lua require'dap'.continue() <CR>
+nnoremap <silent> <leader>so :lua require'dap'.step_over()<CR>
+nnoremap <silent> <leader>i :lua require'dap'.step_into()<CR>
+
+
+
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 	"map <leader>c :w! \| !compiler "<c-r>%"<CR>
@@ -154,5 +162,5 @@ nnoremap <silent> tc :!pdflatex -synctex=1 -interaction=nonstopmode --shell-esca
 " Open corresponding .pdf/.html or preview
 	"map <leader>p :!opout <c-r>%<CR><CR>
 
-]]
 
+]]

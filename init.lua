@@ -31,3 +31,7 @@ require("plugins.lspsaga")
 require("plugins.lspconfig")
 require("plugins.indent-blankline")
 require("plugins.outline")
+require("plugins.vimtex")
+require("plugins.conceal_latex")
+require("plugins.luasnip")
+
