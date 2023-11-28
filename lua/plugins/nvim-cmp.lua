@@ -1,5 +1,23 @@
 -- Set up completion using nvim_cmp with LSP source
 
+
+local cmp = require('cmp')
+local luasnip = require('luasnip')
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+})
+
+
+
 nvim_lsp.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -82,3 +100,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
   }
 )
+
+
+-- The following is some code i coppied
+-- https://github.com/voyeg3r/nvim/blob/master/lua/plugins/config/cmp.lua
