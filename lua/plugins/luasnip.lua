@@ -10,3 +10,9 @@ ls.add_snippets("lua", {
     t('print("Hello world!")')
   })
 })
+
+ls.add_snippets("python", {
+  s("ejemplo", {
+    t('print("Hello world!")')
+  })
+})

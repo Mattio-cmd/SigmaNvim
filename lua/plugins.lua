@@ -138,8 +138,24 @@ use {
     	-- follow latest release.
     --tag = "v2.1", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
   	-- install jsregexp (optional!:).
-  	run = "make install_jsregexp"
+  	run = "make install_jsregexp",
+
+    config = function ()
+    require'cmp'.setup {
+    snippet = {
+      expand = function(args)
+        require'luasnip'.lsp_expand(args.body)
+      end
+    },
+
+    sources = {
+      { name = 'luasnip' },
+      -- more sources
+    },
   }
+  end
+  }
+
   use {
     'saadparwaiz1/cmp_luasnip'
   }
