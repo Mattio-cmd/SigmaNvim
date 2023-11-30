@@ -67,4 +67,3 @@ au BufNewFile,BufRead *.mdx set filetype=markdown
 au BufNewFile,BufRead *.flow set filetype=javascript
 set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 ]]
-

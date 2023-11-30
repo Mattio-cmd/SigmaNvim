@@ -35,5 +35,6 @@ dashboard.section.buttons.val = {
 	--dashboard.button("t", "  > Find text", ":Telescope live_grep <CR>"),
 	--dashboard.button("m", "  > Bookmarks", ":Telescope marks<CR>"),
 	dashboard.button("s", "  > Settings", ":e ~/.config/nvim/ <CR>"),
-	dashboard.button("u", "  > Update Plugins", ":PackerSync <CR>"),
+	dashboard.button("u", "  > Update Plugins", ":Lazy <CR>"),
 }
+

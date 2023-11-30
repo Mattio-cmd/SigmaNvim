@@ -1,60 +1,141 @@
-vim.cmd [[
-set laststatus=3                        " Always display the status line
-syntax enable                           " Enables syntax highlighing
-set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Display long lines as just one line
-set encoding=utf-8                      " The encoding displayed
-set pumheight=10                        " Makes popup menu smaller
-set fileencoding=utf-8                  " The encoding written to file
-set ruler              			            " Show the cursor position all the time
-set cmdheight=1                         " More space for displaying messages
-set iskeyword+=-                      	" treat dash separated words as a word text object"
-set mouse=a                             " Enable your mouse
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
-set conceallevel=0                      " So that I can see `` in markdown files
-set tabstop=2                           " Insert 2 spaces for a tab
-set shiftwidth=2                        " Change the number of space characters inserted for indentation
-set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-set expandtab                           " Converts tabs to spaces
-set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
-set statusline=%m\ %F\ %m\%y\ %{&fileencoding?&fileencoding:&encoding}\%T\ %=%(C:%c\ L:%l\ %P%)
-set number                              " Line numbers
-set cursorline                          " Enable highlighting of the current line
-set background=dark                     " tell vim what the background color looks like
-set showtabline=3                       " Always show tabs
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
-set nobackup                            " This is recommended by coc
-set nowritebackup                       " This is recommended by coc
-set updatetime=300                      " Faster completion
-set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard=unnamedplus               " Copy paste between vim and everything else
-set autochdir                           " Your working directory will always be the same as your working directory
-set exrc
-set cmdwinheight=1
-set wildmenu
-set nolist
-set wildmode=longest:full,full
-set secure
-set relativenumber
-set colorcolumn=110
-set smartcase
-set noswapfile
-set undofile
-set incsearch
-highlight ColorColum ctermbg=gray
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-" You can't stop me
-cmap w!! w !sudo tee %
-" I added this beacause idk why but header files would be recognized as cpp, lol
+-- Always display the status line
+vim.o.laststatus = 3
+
+-- Enables syntax highlighting
+vim.cmd('syntax enable')
+
+-- Required to keep multiple buffers open multiple buffers
+vim.o.hidden = true
+
+-- Display long lines as just one line
+vim.o.wrap = false
+
+-- The encoding displayed
+vim.o.encoding = 'utf-8'
+
+-- Makes popup menu smaller
+vim.o.pumheight = 10
+
+-- The encoding written to file
+vim.o.fileencoding = 'utf-8'
+
+-- Show the cursor position all the time
+vim.o.ruler = true
+
+-- More space for displaying messages
+vim.o.cmdheight = 1
+
+-- Treat dash separated words as a word text object
+--vim.o.iskeyword = vim.o.iskeyword .. '-'
+
+-- Enable your mouse
+vim.o.mouse = 'a'
+
+-- Horizontal splits will automatically be below
+vim.o.splitbelow = true
+
+-- Vertical splits will automatically be to the right
+vim.o.splitright = true
+
+-- Support 256 colors
+vim.o.t_Co = 256
+
+-- So that I can see ` conceal level in markdown files
+vim.o.conceallevel = 0
+
+-- Insert 2 spaces for a tab
+vim.o.tabstop = 2
+
+-- Change the number of space characters inserted for indentation
+vim.o.shiftwidth = 2
+
+-- Makes tabbing smarter will realize you have 2 vs 4
+vim.o.smarttab = true
+
+-- Converts tabs to spaces
+vim.o.expandtab = true
+
+-- Makes indenting smart
+vim.o.smartindent = true
+
+-- Good auto indent
+vim.o.autoindent = true
+
+-- Status line configuration
+vim.o.statusline = '%m %F %m%y %{&fileencoding?&fileencoding:&encoding}%T %=%(C:%c L:%l %P%)'
+
+-- Line numbers
+vim.o.number = true
+
+-- Enable highlighting of the current line
+vim.o.cursorline = true
+
+-- Tell Neovim what the background color looks like
+vim.o.background = 'dark'
+
+-- Always show tabs
+vim.o.showtabline = 3
+
+-- We don't need to see things like -- INSERT -- anymore
+vim.o.showmode = false
+
+-- This is recommended by coc
+vim.o.backup = false
+
+-- This is recommended by coc
+vim.o.writebackup = false
+
+-- Faster completion
+vim.o.updatetime = 300
+
+-- By default timeoutlen is 1000 ms
+vim.o.timeoutlen = 500
+
+-- Stop newline continuation of comments
+vim.o.formatoptions = vim.o.formatoptions:gsub("[cro]", "")
+
+-- Copy paste between Neovim and everything else
+vim.o.clipboard = 'unnamedplus'
+
+-- Your working directory will always be the same as your working directory
+vim.o.autochdir = true
+
+-- Enable reading .exrc files
+vim.o.exrc = true
+
+vim.o.cmdwinheight = 1
+vim.o.wildmenu = true
+vim.o.nolist = true
+vim.o.wildmode = 'longest:full,full'
+vim.o.secure = true
+vim.o.relativenumber = true
+vim.o.colorcolumn = '110'
+vim.o.smartcase = true
+vim.o.swapfile = false
+vim.o.undofile = true
+vim.o.incsearch = true
+
+-- Highlight ColorColumn background
+vim.cmd('highlight ColorColumn ctermbg=gray')
+
+-- Auto source when writing to init.vim; alternatively, you can run :source $MYVIMRC
+vim.api.nvim_exec([[
+augroup auto_source
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source %
+augroup END
+]], false)
+
+-- You can't stop me
+vim.api.nvim_set_keymap('c', 'w!!', 'w !doas tee %', { noremap = true, silent = true })
+
+-- Header files would be recognized as cpp
+vim.api.nvim_exec([[
 augroup project
   autocmd!
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 augroup END
+]], false)
 
-let g:markdown_fenced_languages = ['typescript', 'c', 'python', 'cpp']
-]]
-
+-- Set markdown fenced languages
+vim.g.markdown_fenced_languages = {'typescript', 'c', 'python', 'cpp'}

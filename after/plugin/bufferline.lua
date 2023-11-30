@@ -1,6 +1,12 @@
-require('bufferline').setup {
-	options = {
-		numbers = "ordinal", -- "none" | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string
+local status, bufferline = pcall(require, "bufferline")
+if not status then
+  print("ERROR bufferline")
+  return
+end
+
+bufferline.setup({
+  options = {
+ 		numbers = "ordinal", -- "none" | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string
 		always_show_bufferline = true, -- don't show bufferline if there is only one file is opened
 
 		close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -26,11 +32,11 @@ require('bufferline').setup {
 		show_close_icon = false,
 		show_buffer_icons = true, -- disable filetype icons for buffers
 		show_buffer_close_icons = false,
-		show_tab_indicators = false,
+		show_tab_indicators = true,
 
 		-- can also be a table containing 2 custom separators
 		-- [focused and unfocused]. eg: { '|', '|' }
-		separator_style = {"", ""}, -- options "slant" | "thick" | "thin" | { 'any', 'any' },
+		separator_style = {"|", "|"}, -- options "slant" | "thick" | "thin" | { 'any', 'any' },
 		offsets = {
 			-- options function , text_" "h always_show_bufferline = false
 			{filetype = "NvimTree", text = "Explorer", text_align = "left"},
@@ -43,7 +49,7 @@ require('bufferline').setup {
          --}
       --end,
    --},
-	},
+  },
 
 	highlights = {
 		fill = {bg = {highlight = "BufferLineFill", attribute = "bg"}},
@@ -92,5 +98,16 @@ require('bufferline').setup {
 		-- indicator_selected = {
 		-- },
 	},
+})
 
-}
+-- Revisar esto, porque no se como arreglarlo
+--local nnoremap = require("rav64.keymaps").nnoremap
+
+--for i = 1, 9 do
+  --nnoremap("<leader>" .. i, function()
+    --require("bufferline").go_to_buffer(i, true)
+  --end)
+--end
+--nnoremap("<leader>" .. 0, function()
+  --require("bufferline").go_to_buffer(-1, true)
+--end)
