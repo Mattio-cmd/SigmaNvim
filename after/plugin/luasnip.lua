@@ -19,10 +19,12 @@ ls.add_snippets("lua", {
   })
 })
 
-ls.add_snippets("python", {
-  s("ejemplo", {
-    t('print("Hello world!")')
-  })
+ls.add_snippets("tex", {
+    s("beg", {
+        t("\\begin{"), i(1), t("}"),
+        t({ "", "\t" }), i(0),
+        t({ "", "\\end{" }), rep(1), t("}"),
+    })
 })
 
 -- luasnip.lua
