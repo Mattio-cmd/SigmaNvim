@@ -12,6 +12,7 @@
   "lspkind-nvim": { "branch": "master", "commit": "57610d5ab560c073c465d6faf0c19f200cb67e6e" },
   "lspsaga.nvim": { "branch": "main", "commit": "5faeec9f2508d2d49a66c0ac0d191096b4e3fa81" },
   "lualine.nvim": { "branch": "master", "commit": "2248ef254d0a1488a72041cfb45ca9caada6d994" },
+  "luasnip-latex-snippets.nvim": { "branch": "main", "commit": "c06cb4b449bdf0e2984543b7c56379409b04d3fc" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "nerdcommenter": { "branch": "master", "commit": "da948e160d9f54c2967c7927b9c74c5a68c8dc49" },
   "nvim-autopairs": { "branch": "master", "commit": "0f04d78619cce9a5af4f355968040f7d675854a1" },

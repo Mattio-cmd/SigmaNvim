@@ -13,6 +13,7 @@ local f = ls.function_node
 local d = ls.dynamic_node
 local sn = ls.snippet_node
 
+
 ls.add_snippets("lua", {
   s("hello", {
     t('print("Hello world!")')
