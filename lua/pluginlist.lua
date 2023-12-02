@@ -26,13 +26,15 @@ return {
 
     'elkowar/yuck.vim',
 
-    'lervag/vimtex',
-
     'saadparwaiz1/cmp_luasnip',
 
     'KeitaNakamura/tex-conceal.vim',
 
+    'lervag/vimtex',
+
     'kyazdani42/nvim-tree.lua',
+
+    'evesdropper/luasnip-latex-snippets.nvim',
 
    -- colorscheme
   {
