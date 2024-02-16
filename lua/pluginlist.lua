@@ -34,7 +34,7 @@ return {
 
     'kyazdani42/nvim-tree.lua',
 
-    'evesdropper/luasnip-latex-snippets.nvim',
+    --'evesdropper/luasnip-latex-snippets.nvim',
 
    -- colorscheme
   {

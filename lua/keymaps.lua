@@ -128,7 +128,7 @@ vim.api.nvim_set_keymap('n', ',c', ':-1read $HOME/.config/nvim/lua/skeletons/.sk
 vim.api.nvim_set_keymap('n', ',f', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>2j6li', {})
 vim.api.nvim_set_keymap('n', ',m', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.make<CR>j4li', {})
 vim.api.nvim_set_keymap('n', ',t', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.tex<CR>2j9li', {})
-vim.api.nvim_set_keymap('n', ',ti', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.img.tex<CR>2j40li', {})
+vim.api.nvim_set_keymap('n', ',ti', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.img.tex<CR>2j41li', {})
 vim.api.nvim_set_keymap('n', ',d', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.md<CR>1j6l<S-a><Space>', {})
 vim.api.nvim_set_keymap('n', ',a', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.ack.c<CR>', {})
 vim.api.nvim_set_keymap('n', ',p', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.flask.py<CR>', {})
@@ -154,7 +154,10 @@ vim.api.nvim_set_keymap('n', 'sr', ':SnipReset<CR> :SnipClose<CR>', { noremap = 
 vim.api.nvim_set_keymap('n', '<S-m>', ':!cd ..;make;./bin/main <CR>', { noremap = true })
 
 -- Compile LaTeX to pdf
-vim.api.nvim_set_keymap('n', '<S-z>', ':!pdflatex main.tex <CR> :!pdflatex main.tex <CR> <CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<S-z>', ':!pdflatex main.tex <CR> :!pdflatex main.tex <CR> <CR> <CR> <CR>', { noremap = true })
+
+-- Compile dwm
+vim.api.nvim_set_keymap('n', '<S-t>', ':!doas make install', { noremap = true })
 
 -- Find and replace idk
 -- vim.api.nvim_set_keymap('n', '<>', ':%s/x/y/g', { noremap = true })

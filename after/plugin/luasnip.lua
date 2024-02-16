@@ -22,6 +22,34 @@ ls.add_snippets("tex", {
     })
 })
 
+ls.add_snippets("tex", {
+    s("it", {
+        t("\\begin{itemize}"),
+        t({ "", "\t\\item{" }), i(1), t("}"),
+        t({ "", "\\end{itemize}" }),
+    })
+})
+
+ls.add_snippets("tex", {
+    s("fig", {
+        t("\\begin{figure}[h]"),
+        t({ "\t", "\t\\centering" }),
+        t({ "\t", "\t\\includegraphics[width=0.8\\textwidth]{" }), i(1), t("}"),
+        t({ "\t", "\t\\caption{" }), i(2), t("}"),
+        t({ "\t", "\t\\label{" }), i(3), t("}"),
+        t({ "", "\\end{figure}" }),
+    })
+})
+
+
+--\begin{figure}[h]
+  --\centering
+  --\includegraphics[width=0.3\textwidth]{}
+  --\caption{}
+  --\label{fig:your_label}
+--\end{figure}
+
+
 -- luasnip.lua
 vim.keymap.set({ "i", "s" }, "<A-n>", function()
     if ls.choice_active() then
