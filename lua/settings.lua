@@ -38,7 +38,7 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 
 -- Support 256 colors
-vim.o.t_Co = 256
+--vim.o.t_Co = 256
 
 -- So that I can see ` conceal level in markdown files
 vim.o.conceallevel = 0
@@ -105,7 +105,7 @@ vim.o.exrc = true
 
 vim.o.cmdwinheight = 1
 vim.o.wildmenu = true
-vim.o.nolist = true
+--vim.o.nolist = true
 vim.o.wildmode = 'longest:full,full'
 vim.o.secure = true
 vim.o.relativenumber = true
