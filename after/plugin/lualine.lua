@@ -87,10 +87,9 @@ ins_left {
 }
 
 ins_left {
-  -- mode component BSD bsd
+  -- mode component BSD
   function()
     return ''
-    -- return ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -156,7 +155,7 @@ ins_left {
   end,
 }
 
-ins_left {
+--ins_left {
   -- Lsp server name .
   --function()
     --local msg = 'No Active Lsp'
@@ -175,7 +174,7 @@ ins_left {
   --end,
   --icon = ' LSP:',
   --color = { fg = '#ffffff', gui = 'bold' },
-}
+--}
 
 -- Add components to right sections
 ins_right {

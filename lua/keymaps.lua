@@ -5,8 +5,8 @@ local set_keymap = vim.api.nvim_set_keymap
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-local keymap = vim.api.nvim_set_keymap
-local options = {noremap = true, silent = true}
+--local keymap = vim.api.nvim_set_keymap
+--local options = {noremap = true, silent = true}
 
 
 set_keymap('i', '<C-j>', "<cmd>lua require'luasnip'.expand_or_jump()<CR>", { expr = true, noremap = true, silent = true })

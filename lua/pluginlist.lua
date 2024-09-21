@@ -22,7 +22,7 @@ return {
 
    'onsails/lspkind-nvim',
 
-   'tami5/lspsaga.nvim',
+   'nvimdev/lspsaga.nvim',
 
     'elkowar/yuck.vim',
 
@@ -43,12 +43,10 @@ return {
   },
 
   -- lualine
-  {
+{
     'nvim-lualine/lualine.nvim',
-    dependencies = {
-      "nvim-tree/nvim-web-devicons"
-    },
-  },
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+},
 
   -- Telescope
   {
