@@ -6,8 +6,6 @@ return {
 
    'windwp/nvim-autopairs',
 
-   'windwp/nvim-autopairs',
-
    'lukas-reineke/indent-blankline.nvim',
 
    'norcalli/nvim-colorizer.lua',
@@ -23,8 +21,6 @@ return {
    'onsails/lspkind-nvim',
 
    'nvimdev/lspsaga.nvim',
-
-    'elkowar/yuck.vim',
 
     'saadparwaiz1/cmp_luasnip',
 
@@ -55,10 +51,10 @@ return {
   },
 
   -- markdown preview
-  {
-    'iamcco/markdown-preview.nvim',
-    run = function() vim.fn["mkdp#util#install"]() end,
-  },
+  --{
+    --'iamcco/markdown-preview.nvim',
+    --run = function() vim.fn["mkdp#util#install"]() end,
+  --},
 
   -- Greeter
   {
