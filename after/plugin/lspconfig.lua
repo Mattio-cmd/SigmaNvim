@@ -2,9 +2,6 @@
 vim.lsp.set_log_level("debug")
 require'lspconfig'.pyright.setup{}
 
---R programing
-require'lspconfig'.r_language_server.setup{}
-
 --lualsp
 require'lspconfig'.lua_ls.setup {
   on_init = function(client)
@@ -83,6 +80,7 @@ require'lspconfig'.texlab.setup{
 }
 
 require'lspconfig'.rust_analyzer.setup{}
+
 require'lspconfig'.eslint.setup{
     capabilities = capabilities,
 }
