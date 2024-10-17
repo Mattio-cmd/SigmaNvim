@@ -81,9 +81,9 @@ require'lspconfig'.texlab.setup{
 
 require'lspconfig'.rust_analyzer.setup{}
 
-require'lspconfig'.eslint.setup{
-    capabilities = capabilities,
-}
+require'lspconfig'.ts_ls.setup{}
+
+--require'lspconfig'.eslint.setup{}
 
 require'lspconfig'.cssls.setup {
   capabilities = capabilities,
