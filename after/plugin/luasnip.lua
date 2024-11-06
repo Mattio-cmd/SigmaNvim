@@ -31,6 +31,18 @@ ls.add_snippets("tex", {
 })
 
 ls.add_snippets("tex", {
+    s("lap", {
+        t("\\mathcal{L} \\left\\{ "), i(1), t(" \\right\\}"),
+    })
+})
+
+ls.add_snippets("tex", {
+    s("ilap", {
+        t("\\mathcal{L}^{-1} \\left\\{ "), i(1), t(" \\right\\}"),
+    })
+})
+
+ls.add_snippets("tex", {
     s("fig", {
         t("\\begin{figure}[h]"),
         t({ "\t", "\t\\centering" }),
