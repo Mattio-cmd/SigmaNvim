@@ -154,7 +154,8 @@ vim.api.nvim_set_keymap('n', 'sr', ':SnipReset<CR> :SnipClose<CR>', { noremap = 
 vim.api.nvim_set_keymap('n', '<S-m>', ':!cd ..;make;./bin/main <CR>', { noremap = true })
 
 -- Compile LaTeX to pdf
-vim.api.nvim_set_keymap('n', '<S-z>', ':!pdflatex main.tex <CR> :!pdflatex main.tex <CR> <CR> <CR> <CR>', { noremap = true })
+--vim.api.nvim_set_keymap('n', '<S-z>', ':!pdflatex main.tex <CR> :!pdflatex main.tex <CR> <CR> <CR> <CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<S-z>', ':!pdflatex % && echo "\\n" && exit<CR>', { noremap = true, silent = true })
 
 -- Compile dwm
 vim.api.nvim_set_keymap('n', '<S-t>', ':!doas make install', { noremap = true })
