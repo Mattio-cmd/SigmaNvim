@@ -83,6 +83,11 @@ require'lspconfig'.rust_analyzer.setup{}
 
 require'lspconfig'.ts_ls.setup{}
 
+--require'lspconfig'.matlab_ls.setup{
+    --root_dir = require'lspconfig'.util.root_pattern("*.m", ".git")
+--}
+
+
 --require'lspconfig'.eslint.setup{}
 
 require'lspconfig'.cssls.setup {
