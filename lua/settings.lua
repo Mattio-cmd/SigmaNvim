@@ -1,4 +1,4 @@
--- Always display the status line
+--false Always display the status line
 vim.o.laststatus = 3
 
 -- Enables syntax highlighting
