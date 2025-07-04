@@ -16,8 +16,6 @@ return {
 
    'hrsh7th/nvim-cmp',
 
-   'nvim-lua/completion-nvim',
-
    'onsails/lspkind-nvim',
 
    'nvimdev/lspsaga.nvim',
@@ -58,10 +56,10 @@ return {
     end
   },
 
-  { -- TODO: Configure this
-    'michaelb/sniprun',
-    run = 'bash ./install.sh',
-  },
+--  { -- TODO: Configure this
+ --   'michaelb/sniprun',
+  --  run = 'bash ./install.sh',
+  --},
 
 
   {
@@ -83,6 +81,5 @@ return {
     'L3MON4D3/LuaSnip',
   	run = "make install_jsregexp",
   },
-
 
 }

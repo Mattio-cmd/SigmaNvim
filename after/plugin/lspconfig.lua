@@ -82,6 +82,7 @@ require'lspconfig'.texlab.setup{
 require'lspconfig'.rust_analyzer.setup{}
 
 require'lspconfig'.ts_ls.setup{}
+-- Se usa typescript-language-server
 
 --require'lspconfig'.matlab_ls.setup{
     --root_dir = require'lspconfig'.util.root_pattern("*.m", ".git")

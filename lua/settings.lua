@@ -1,124 +1,73 @@
---false Always display the status line
-vim.o.laststatus = 3
+-- General Settings
+vim.o.hidden = true                      -- Keep multiple buffers open
+vim.o.wrap = false                       -- Display long lines as just one line
+vim.o.encoding = 'utf-8'                 -- Encoding displayed
+vim.o.fileencoding = 'utf-8'             -- Encoding written to file
+vim.o.ruler = true                       -- Show the cursor position all the time
+vim.o.cmdheight = 1                      -- More space for displaying messages
+vim.o.mouse = 'a'                        -- Enable mouse support
+vim.o.splitbelow = true                  -- Horizontal splits below
+vim.o.splitright = true                  -- Vertical splits to the right
+vim.o.background = 'dark'                -- Set background to dark for colors
+vim.o.number = true                      -- Show line numbers
+vim.o.relativenumber = true              -- Relative line numbers
+vim.o.cursorline = true                  -- Highlight the current line
+vim.o.showtabline = 3                    -- Always show tabs
+vim.o.showmode = false                   -- Don't show -- INSERT --
+vim.o.wildmenu = true                    -- Enable wildmenu for command completion
+vim.o.wildmode = 'longest:full,full'     -- Wildmenu completion mode
+vim.o.colorcolumn = '110'                -- Highlight color column at 110th char
 
--- Enables syntax highlighting
-vim.cmd('syntax enable')
+-- Syntax & Filetype Settings
+vim.cmd('syntax enable')                 -- Enable syntax highlighting
+vim.g.markdown_fenced_languages = {'typescript', 'c', 'python', 'cpp'} -- Markdown fenced languages
+vim.api.nvim_exec([[
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+augroup END
+]], false)
 
--- Required to keep multiple buffers open multiple buffers
-vim.o.hidden = true
+-- Tab & Indentation Settings
+vim.o.tabstop = 2                        -- Insert 2 spaces for a tab
+vim.o.shiftwidth = 2                     -- Change the number of spaces for indentation
+vim.o.smarttab = true                    -- Smart tabbing behavior
+vim.o.expandtab = true                   -- Convert tabs to spaces
+vim.o.smartindent = true                 -- Smart indentation
+vim.o.autoindent = true                  -- Enable auto indent
 
--- Display long lines as just one line
-vim.o.wrap = false
+-- Backup & Write Settings
+vim.o.backup = false                     -- Disable backup files
+vim.o.writebackup = false                -- Disable write backup
+vim.o.swapfile = false                   -- Disable swap files
+vim.o.undofile = true                    -- Enable undofile for persistent undo
+vim.o.autochdir = true                   -- Change working directory to the file's directory
 
--- The encoding displayed
-vim.o.encoding = 'utf-8'
+-- Search Settings
+vim.o.incsearch = true                   -- Enable incremental search
+vim.o.smartcase = true                   -- Enable smart case search
 
--- Makes popup menu smaller
-vim.o.pumheight = 10
+-- Timeout Settings
+vim.o.timeoutlen = 500                   -- Timeout length for mappings (in ms)
+vim.o.updatetime = 300                   -- Faster completion (ms)
 
--- The encoding written to file
-vim.o.fileencoding = 'utf-8'
+-- Clipboard & File Handling
+vim.o.clipboard = 'unnamedplus'          -- Copy-paste with system clipboard
+vim.o.exrc = true                        -- Enable reading .exrc files
 
--- Show the cursor position all the time
-vim.o.ruler = true
+-- UI Settings
+vim.o.laststatus = 3                     -- Always display the status line
+vim.o.pumheight = 10                     -- Make popup menu smaller
+vim.o.statusline = '%m %F %m%y %{&fileencoding?&fileencoding:&encoding}%T %=%(C:%c L:%l %P%)' -- Status line format
+vim.o.cmdwinheight = 1                   -- Command window height
+vim.o.secure = true                      -- Secure the environment (important for exrc files)
+vim.o.formatoptions = vim.o.formatoptions:gsub("[cro]", "")  -- Stop newline continuation of comments
 
--- More space for displaying messages
-vim.o.cmdheight = 1
+-- Other UI Settings
+vim.cmd('highlight ColorColumn ctermbg=gray') -- Highlight color column background
+vim.o.colorcolumn = '110'                -- Highlight color column at the 110th column
 
--- Treat dash separated words as a word text object
---vim.o.iskeyword = vim.o.iskeyword .. '-'
-
--- Enable your mouse
-vim.o.mouse = 'a'
-
--- Horizontal splits will automatically be below
-vim.o.splitbelow = true
-
--- Vertical splits will automatically be to the right
-vim.o.splitright = true
-
--- Support 256 colors
---vim.o.t_Co = 256
-
--- So that I can see ` conceal level in markdown files
-vim.o.conceallevel = 0
-
--- Insert 2 spaces for a tab
-vim.o.tabstop = 2
-
--- Change the number of space characters inserted for indentation
-vim.o.shiftwidth = 2
-
--- Makes tabbing smarter will realize you have 2 vs 4
-vim.o.smarttab = true
-
--- Converts tabs to spaces
-vim.o.expandtab = true
-
--- Makes indenting smart
-vim.o.smartindent = true
-
--- Good auto indent
-vim.o.autoindent = true
-
--- Status line configuration
-vim.o.statusline = '%m %F %m%y %{&fileencoding?&fileencoding:&encoding}%T %=%(C:%c L:%l %P%)'
-
--- Line numbers
-vim.o.number = true
-
--- Enable highlighting of the current line
-vim.o.cursorline = true
-
--- Tell Neovim what the background color looks like
-vim.o.background = 'dark'
-
--- Always show tabs
-vim.o.showtabline = 3
-
--- We don't need to see things like -- INSERT -- anymore
-vim.o.showmode = false
-
--- This is recommended by coc
-vim.o.backup = false
-
--- This is recommended by coc
-vim.o.writebackup = false
-
--- Faster completion
-vim.o.updatetime = 300
-
--- By default timeoutlen is 1000 ms
-vim.o.timeoutlen = 500
-
--- Stop newline continuation of comments
-vim.o.formatoptions = vim.o.formatoptions:gsub("[cro]", "")
-
--- Copy paste between Neovim and everything else
-vim.o.clipboard = 'unnamedplus'
-
--- Your working directory will always be the same as your working directory
-vim.o.autochdir = true
-
--- Enable reading .exrc files
-vim.o.exrc = true
-
-vim.o.cmdwinheight = 1
-vim.o.wildmenu = true
---vim.o.nolist = true
-vim.o.wildmode = 'longest:full,full'
-vim.o.secure = true
-vim.o.relativenumber = true
-vim.o.colorcolumn = '110'
-vim.o.smartcase = true
-vim.o.swapfile = false
-vim.o.undofile = true
-vim.o.incsearch = true
-
--- Highlight ColorColumn background
-vim.cmd('highlight ColorColumn ctermbg=gray')
-
--- Auto source when writing to init.vim; alternatively, you can run :source $MYVIMRC
+-- Autocommands
 vim.api.nvim_exec([[
 augroup auto_source
   autocmd!
@@ -126,10 +75,11 @@ augroup auto_source
 augroup END
 ]], false)
 
--- You can't stop me
+-- Key Mappings
+-- For the "w!!" command (write to sudo-protected file)
 vim.api.nvim_set_keymap('c', 'w!!', 'w !doas tee %', { noremap = true, silent = true })
 
--- Header files would be recognized as cpp
+-- Insert Header as C files
 vim.api.nvim_exec([[
 augroup project
   autocmd!
@@ -139,3 +89,7 @@ augroup END
 
 -- Set markdown fenced languages
 vim.g.markdown_fenced_languages = {'typescript', 'c', 'python', 'cpp'}
+
+-- Other Settings
+vim.o.cmdwinheight = 1                  -- Command window height
+vim.o.smartcase = true                   -- Smart case search
