@@ -4,8 +4,4 @@
   --'css';
   --'html';
   --'javascript';
-  --html = {
-    --mode = 'foreground';
-  --}
 --}
-

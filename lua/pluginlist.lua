@@ -78,8 +78,12 @@ return {
   },
 
   {
-    'L3MON4D3/LuaSnip',
+    'L3MON4D3/LuaSnip', -- Remove if it fucks everything up
   	run = "make install_jsregexp",
+    event = "InsertEnter",
+    config = function()
+    require("luasnip.loaders.from_vscode").lazy_load()
+  end,
   },
 
 }
