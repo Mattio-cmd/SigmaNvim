@@ -79,6 +79,28 @@ require'lspconfig'.texlab.setup{
   }
 }
 
+-- SystemVerilog
+-- verible: yay -S verible
+vim.lsp.enable('verible')
+require'lspconfig'.verible.setup{}
+
+-- svls: yay -S svls
+--vim.lsp.enable('svls')
+--require'lspconfig'.svls.setup{
+    --"neovim/nvim-lspconfig",
+  --opts = {
+    --servers = {
+      --svls = {
+        --root_dir = function(fname)
+          --return require("lspconfig.util").find_git_ancestor(fname)
+        --end,
+        --cmd = { "svls" },
+        --filetypes = { "verilog", "systemverilog" },
+      --},
+    --},
+  --},
+--}
+
 require'lspconfig'.rust_analyzer.setup{}
 
 require'lspconfig'.ts_ls.setup{}
