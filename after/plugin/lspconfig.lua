@@ -85,7 +85,7 @@ vim.lsp.enable('verible')
 require'lspconfig'.verible.setup{}
 
 -- svls: yay -S svls
---vim.lsp.enable('svls')
+vim.lsp.enable('svls')
 --require'lspconfig'.svls.setup{
     --"neovim/nvim-lspconfig",
   --opts = {

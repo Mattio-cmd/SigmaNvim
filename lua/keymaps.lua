@@ -123,6 +123,7 @@ set_keymap('n', ',d', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.md<CR>
 set_keymap('n', ',a', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.ack.c<CR>', {})
 set_keymap('n', ',p', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.flask.py<CR>', {})
 set_keymap('n', ',ma', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.newtonraphson.m<CR>', {})
+set_keymap('n', ',mi', ':-1read $HOME/.config/nvim/lua/skeletons/.skeleton.minipage.tex<CR>4j7w2li', {})
 
 -- BufferLine
 vim.cmd[[

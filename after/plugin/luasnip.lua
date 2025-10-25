@@ -8,11 +8,6 @@ local i = ls.insert_node
 local extras = require("luasnip.extras")
 local rep = extras.rep
 
-ls.add_snippets("lua", {
-  s("hello", {
-    t('print("Hello world!")')
-  })
-})
 
 ls.add_snippets("tex", {
     s("beg", {
@@ -59,6 +54,23 @@ ls.add_snippets("tex", {
     })
 })
 
+ls.add_snippets("tex", {
+    s("minipage", {
+        t("\\begin{figure}[h]"),  -- Inicia la figura
+        t({ "\t\\centering" }),    -- Centrado
+        t({ "\t\\begin{minipage}{0.3\\textwidth}" }),  -- Minipage para la imagen
+        t({ "\t\t\\centering" }),  -- Centrado de la imagen
+        t({ "\t\t\\includegraphics[width=\\textwidth]{" }), i(1), t("}"),  -- Imagen
+        t({ "\t\\end{minipage}" }),  -- Cierra la minipage de la imagen
+        t({ "\t\\hspace{0.5cm}" }),  -- Espacio entre imagen y texto
+        t({ "\t\\begin{minipage}{0.48\\textwidth}" }),  -- Minipage para el texto
+        i(2),  -- Texto por defecto
+        t({ "\t\\end{minipage}" }),  -- Cierra la minipage del texto
+        t({ "", "\\end{figure}" })  -- Cierra la figura
+    })
+})
+
+
 ls.add_snippets("matlab", {
     s("func", {
         t("function "), i(1), t(" = "), i(2),
@@ -67,7 +79,7 @@ ls.add_snippets("matlab", {
     })
 })
 
-ls.add_snippets("all", {
+ls.add_snippets("matlab", {
   s("newton", {
     t {
       "function raiz = newton_raphson(f, df, x0, e_a, max_iter)",
