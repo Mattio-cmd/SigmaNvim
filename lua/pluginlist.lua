@@ -73,9 +73,9 @@ return {
         run = ':TSUpdate',
   },
 
-  { -- Symbols outline
-    'simrat39/symbols-outline.nvim',
-  },
+  --{ -- Symbols outline
+    --'simrat39/symbols-outline.nvim',
+  --},
 
   {
     'L3MON4D3/LuaSnip', -- Remove if it fucks everything up

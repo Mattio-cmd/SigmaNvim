@@ -1,4 +1,5 @@
-require 'lspconfig'.lua_ls.setup{}
+-- require 'lspconfig'.lua_ls.setup{} -- deprecated
+vim.lsp.config('lua_ls', {})
 
 local ls = require "luasnip"
 local s = ls.snippet
