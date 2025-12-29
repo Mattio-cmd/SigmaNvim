@@ -92,7 +92,7 @@ end, opts)
 
 -- Terminal
 map("n", ",,", ":split<CR>:res 5<CR>:term<CR>", opts)
-map("n", "<leader>p", ":split<CR>:resize 60<CR>:term<CR>", opts)
+map("n", "<leader>[", ":split<CR>:resize 60<CR>:term<CR>", opts)
 map("n", "<C-v>", ":vsplit<CR>", opts)
 map("n", "<S-h>", ":split<CR>", opts)
 
