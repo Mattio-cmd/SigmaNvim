@@ -33,6 +33,12 @@ ls.add_snippets("tex", {
 })
 
 ls.add_snippets("tex", {
+    s("log", {
+        t("$\\mathbf{"), i(1), t("}$"),
+    })
+})
+
+ls.add_snippets("tex", {
     s("ilap", {
         t("\\mathcal{L}^{-1} \\left\\{ "), i(1), t(" \\right\\}"),
     })
