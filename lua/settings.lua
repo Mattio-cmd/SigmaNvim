@@ -17,7 +17,7 @@ vim.o.showmode = false                   -- Don't show -- INSERT --
 vim.o.wildmenu = true                    -- Enable wildmenu for command completion
 vim.o.wildmode = 'longest:full,full'     -- Wildmenu completion mode
 vim.o.colorcolumn = '110'                -- Highlight color column at 110th char
-vim.lsp.set_log_level(vim.lsp.log_levels.INFO)
+vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
 
 
 -- Syntax & Filetype Settings
