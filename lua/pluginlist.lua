@@ -18,6 +18,10 @@ return {
 
   'kyazdani42/nvim-tree.lua',
 
+  'KeitaNakamura/tex-conceal.vim',
+
+
+
   {
     'L3MON4D3/LuaSnip', -- Remove if it fucks everything up
     run = "make install_jsregexp",
