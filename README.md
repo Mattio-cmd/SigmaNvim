@@ -2,30 +2,20 @@
 ###### in lua
 <img align="center" src="https://user-images.githubusercontent.com/78447457/160265772-6a97f72a-5bf1-4668-aa7f-b5e70dccc6ca.png">
 
-# This is a WIP. Not complete (yet)
+# WIP
 
 ## Showcase
-![dashboard1](./images/dashboard.png)
-<sub>This is kanagawa theme<sub/>
-
-![lsp](./images/lsp-show.png)
-
-### Theme changer depending on time of the day
-- Done with shell scripting
+<!--TODO: This-->
 
 ## Plugins
 - packer.nvim
   * [`wbthomason/packer.nvim`](https://github.com/wbthomason/packer.nvim)
-- gruvbox-material
-  * [`sainnhe/gruvbox-material`](https://github.com/sainnhe/gruvbox-material)
 - kanagawa
   * [`rebelot/kanagawa.nvim`](https://github.com/rebelot/kanagawa.nvim)
 - nerdcommenter
   * [`preservim/nerdcommenter`](https://github.com/preservim/nerdcommenter)
 - lualine.nvim
   * [`nvim-lualine/lualine.nvim`](https://github.com/nvim-lualine/lualine.nvim)
-- presence.nvim (altough this is just for discord users)
-  * [`andweeb/presence.nvim`](https://github.com/andweeb/presence.nvim)
 - nvim-web-devicons
   * [`kyazdani42/nvim-web-devicons`](https://github.com/kyazdani42/nvim-web-devicons)
 - nvim-tree.lua
@@ -69,18 +59,8 @@
   * [`nathom/filetype.nvim`](https://github.com/nathom/filetype.nvim)
 - wildermenu.nvim
   * [`'gelguy/wilder.nvim'`](https://github.com/gelguy/wilder.nvim)
-
-### Plugins disabled by default
-- flutter-tools.nvim
-  * [`akinsho/flutter-tools.nvim`](https://github.com/akinsho/flutter-tools.nvim)
-- dart-vim-plugin
-  * [`dart-lang/dart-vim-plugin`](https://github.com/dart-lang/dart-vim-plugin)
 - LuaSnip
   * [`L3MON4D3/LuaSnip`](https://github.com/L3MON4D3/LuaSnip)
-- zepl.vim
-  * [`axvr/zepl.vim`](https://github.com/axvr/zepl.vim)
-- yuck.vim
-  * [`elkowar/yuck.vim`](https://github.com/elkowar/yuck.vim)
 
 ##  Important remaps
 - ```leader key is the space bar```
@@ -98,15 +78,3 @@
 - ```Control + v``` will vertically split the window.
 - ```Shift + h``` will horizontally split the window.
 - ```Shift + k``` will bring a help menu in whatever happens you are positioned.
-
-## Extras
-- Shell script for changing the coloscheme depending on the hour of the day.
-- Wallpapers to match the colorschemes
-
-## TO-DO
-- [x] Have a clean codebase <br>
-- [x] Optimize it <br>
-- [ ] Make the REAME better xd <br>
-- [ ] Lower start-up time to the minimum possible <br>
-- [x] Add a logo or something to it <br>
- * [ ] Make the logo better <br>
