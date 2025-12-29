@@ -6,8 +6,6 @@ return {
 
    'windwp/nvim-autopairs',
 
-   'lukas-reineke/indent-blankline.nvim',
-
    'norcalli/nvim-colorizer.lua',
 
    'neovim/nvim-lspconfig',
@@ -23,8 +21,6 @@ return {
     'saadparwaiz1/cmp_luasnip',
 
     'KeitaNakamura/tex-conceal.vim',
-
-    'lervag/vimtex',
 
     'kyazdani42/nvim-tree.lua',
 
@@ -56,12 +52,6 @@ return {
     end
   },
 
---  { -- TODO: Configure this
- --   'michaelb/sniprun',
-  --  run = 'bash ./install.sh',
-  --},
-
-
   {
      'akinsho/bufferline.nvim',
       dependencies = { 'kyazdani42/nvim-web-devicons' },
@@ -72,10 +62,6 @@ return {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
   },
-
-  --{ -- Symbols outline
-    --'simrat39/symbols-outline.nvim',
-  --},
 
   {
     'L3MON4D3/LuaSnip', -- Remove if it fucks everything up
