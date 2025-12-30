@@ -125,11 +125,9 @@ map("n", "<leader>d", ":Alpha<CR>", opts)
 -- Skeletons
 map("n", ",h", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>6jwf>a")
 map("n", ",c", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<Tab>")
-map("n", ",f", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.dart<CR>2j6li")
 map("n", ",m", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.make<CR>j4li")
 map("n", ",t", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.tex<CR>2j9li")
 map("n", ",d", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.md<CR>1j6lA ")
-map("n", ",p", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.flask.py<CR>")
 map("n", ",mi", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.minipage.tex<CR>4j7w2li")
 
 -- BufferLine
