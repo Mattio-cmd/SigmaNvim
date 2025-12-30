@@ -68,10 +68,17 @@ return {
       dependencies = { 'kyazdani42/nvim-web-devicons' },
   },
 
+  -- lualine
   {
-    'rebelot/kanagawa.nvim',
-    priority = 1000,
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
 
+
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+  },
 
 }

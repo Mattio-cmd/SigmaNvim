@@ -8,8 +8,8 @@
 <!--TODO: This-->
 
 ## Plugins
-- packer.nvim
-  * [`wbthomason/packer.nvim`](https://github.com/wbthomason/packer.nvim)
+- lazy.nvim
+  * [`folke/lazy.nvim`](https://github.com/folke/lazy.nvim.git)
 - LuaSnip
   * [`L3MON4D3/LuaSnip`](https://github.com/L3MON4D3/LuaSnip)
 
