@@ -2,55 +2,44 @@ return {
 
 	'lewis6991/impatient.nvim', -- Speed up loading Lua modules in Neovim to improve startup time.
 
-  'neovim/nvim-lspconfig',
+   'preservim/nerdcommenter',
 
-  'hrsh7th/cmp-nvim-lsp',
+   'windwp/nvim-autopairs',
 
-  'hrsh7th/nvim-cmp',
+   'norcalli/nvim-colorizer.lua',
 
-  'onsails/lspkind-nvim',
+   'neovim/nvim-lspconfig',
 
-  'preservim/nerdcommenter',
+   'hrsh7th/cmp-nvim-lsp',
 
-  'windwp/nvim-autopairs',
+   'hrsh7th/nvim-cmp',
 
-  'norcalli/nvim-colorizer.lua',
+   'onsails/lspkind-nvim',
 
-  'kyazdani42/nvim-tree.lua',
+   'nvimdev/lspsaga.nvim',
 
-  'KeitaNakamura/tex-conceal.vim',
+    'saadparwaiz1/cmp_luasnip',
+
+    'KeitaNakamura/tex-conceal.vim',
+
+    'kyazdani42/nvim-tree.lua',
 
 
-
+   -- colorscheme
   {
-    'L3MON4D3/LuaSnip', -- Remove if it fucks everything up
-    run = "make install_jsregexp",
-    event = "InsertEnter",
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
-    end,
+      'rebelot/kanagawa.nvim',
+      priority = 1000,
   },
 
-  {
-    'nvimdev/lspsaga.nvim',
-    config = function()
-        require('lspsaga').setup({})
-    end,
-    dependencies = {
-        'nvim-treesitter/nvim-treesitter', -- optional
-        'nvim-tree/nvim-web-devicons',     -- optional
-    }
-  },
-
-  -- treesitter
-  {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-  },
+  -- lualine
+{
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+},
 
   -- Telescope
   {
-    'nvim-telescope/telescope.nvim',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
 
@@ -68,16 +57,19 @@ return {
       dependencies = { 'kyazdani42/nvim-web-devicons' },
   },
 
-  -- lualine
+  -- treesitter
   {
-      'nvim-lualine/lualine.nvim',
-      dependencies = { 'nvim-tree/nvim-web-devicons' }
-   },
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+  },
 
   {
-    'rebelot/kanagawa.nvim',
-    lazy = false,
-    priority = 1000,
+    'L3MON4D3/LuaSnip', -- Remove if it fucks everything up
+  	run = "make install_jsregexp",
+    event = "InsertEnter",
+    config = function()
+    require("luasnip.loaders.from_vscode").lazy_load()
+  end,
   },
 
 }

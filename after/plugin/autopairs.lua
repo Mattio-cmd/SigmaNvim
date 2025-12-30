@@ -42,6 +42,11 @@ npairs.add_rules {
           return opts.prev_char:match('.%]') ~= nil
       end)
       :use_key(']'),
+  --[===[
+  arrow key on javascript
+      Before 	Insert    After
+      (item)= 	> 	    (item)=> { }
+  --]===]
   Rule('%(.*%)%s*%=>$', ' {  }', { 'typescript', 'typescriptreact', 'javascript' })
     :use_regex(true)
     :set_end_pair_length(2),

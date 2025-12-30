@@ -18,7 +18,8 @@ vim.o.wildmenu = true                    -- Enable wildmenu for command completi
 vim.o.wildmode = 'longest:full,full'     -- Wildmenu completion mode
 vim.o.colorcolumn = '110'                -- Highlight color column at 110th char
 vim.o.termguicolors = true
-vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
+vim.lsp.set_log_level(vim.lsp.log_levels.INFO)
+
 
 -- Syntax & Filetype Settings
 vim.cmd('syntax enable')                 -- Enable syntax highlighting
@@ -66,6 +67,7 @@ vim.o.secure = true                      -- Secure the environment (important fo
 vim.o.formatoptions = vim.o.formatoptions:gsub("[cro]", "")  -- Stop newline continuation of comments
 
 -- Other UI Settings
+vim.cmd('highlight ColorColumn ctermbg=gray') -- Highlight color column background
 vim.o.colorcolumn = '110'                -- Highlight color column at the 110th column
 
 -- Autocommands

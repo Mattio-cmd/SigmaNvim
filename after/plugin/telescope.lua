@@ -31,6 +31,9 @@ telescope.setup {
 
         ['<c-d>'] = require('telescope.actions').delete_buffer,
 
+        -- ["<C-u>"] = actions.preview_scrolling_up,
+        -- ["<C-d>"] = actions.preview_scrolling_down,
+
         ["<PageUp>"] = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
 
@@ -75,12 +78,20 @@ telescope.setup {
       },
     },
   },
-  pickers = {},
+  pickers = {
+    -- Default configuration for builtin pickers goes here:
+    -- picker_name = {
+    --   picker_config_key = value,
+    --   ...
+    -- }
+    -- Now the picker_config_key will be applied every time you call this
+    -- builtin picker
+  },
   extensions = {
     media_files = {
       -- filetypes whitelist
       -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = { "pdf", "png", "webp", "jpg", "jpeg", "mp3", "mp4" },
+      filetypes = { "png", "webp", "jpg", "jpeg" },
       find_cmd = "rg", -- find command (defaults to `fd`)
     },
     file_browser = {

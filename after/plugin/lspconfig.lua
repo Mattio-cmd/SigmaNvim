@@ -104,6 +104,18 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
+  -- Disable formatting for tsserver
+  --if client.name == 'tsserver' then
+    --client.resolved_capabilities.document_formatting = false
+  --end
+
+  -- Automatically format if the server supports it
+  --if client.resolved_capabilities.document_formatting then
+    --vim.api.nvim_command [[augroup Format]]
+    --vim.api.nvim_command [[autocmd! * <buffer>]]
+    --vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    --vim.api.nvim_command [[augroup END]]
+  --end
 end
 
 -- Add the on_attach function to each server configuration (if applicable)
