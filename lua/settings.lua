@@ -20,7 +20,6 @@ vim.o.colorcolumn = '110'                -- Highlight color column at 110th char
 vim.o.termguicolors = true
 vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
 
-
 -- Syntax & Filetype Settings
 vim.cmd('syntax enable')                 -- Enable syntax highlighting
 vim.g.markdown_fenced_languages = {'typescript', 'c', 'python', 'cpp'} -- Markdown fenced languages
@@ -67,7 +66,6 @@ vim.o.secure = true                      -- Secure the environment (important fo
 vim.o.formatoptions = vim.o.formatoptions:gsub("[cro]", "")  -- Stop newline continuation of comments
 
 -- Other UI Settings
-vim.cmd('highlight ColorColumn ctermbg=gray') -- Highlight color column background
 vim.o.colorcolumn = '110'                -- Highlight color column at the 110th column
 
 -- Autocommands
