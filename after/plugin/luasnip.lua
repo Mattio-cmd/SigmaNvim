@@ -33,8 +33,27 @@ ls.add_snippets("tex", {
 })
 
 ls.add_snippets("tex", {
+    s("brackets", {
+        t("\\left\\{ "), i(1), t(" \\right\\}"),
+    })
+})
+
+ls.add_snippets("tex", {
     s("log", {
         t("$\\mathbf{"), i(1), t("}$"),
+    })
+})
+
+ls.add_snippets("tex", {
+    s("colbox", {
+        t("\\begin{tcolorbox}["),
+        t({ "", "  colback=red!5," }),
+        t({ "", "  colframe=" }), i(1), t("!90!black,"),
+        t({ "", "  coltitle=black" }),
+        t({ "", "]" }),
+        t({ "", "" }),
+        i(2),
+        t({ "", "\\end{tcolorbox}" }),
     })
 })
 

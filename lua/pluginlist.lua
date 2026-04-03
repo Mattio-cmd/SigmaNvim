@@ -26,10 +26,12 @@ return {
 
 
    -- colorscheme
+   -- Kanagawa
   {
       'rebelot/kanagawa.nvim',
       priority = 1000,
   },
+
 
   -- lualine
 {
@@ -39,8 +41,8 @@ return {
 
   -- Telescope
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    --'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    --dependencies = { 'nvim-lua/plenary.nvim' },
   },
 
   -- Greeter

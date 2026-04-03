@@ -68,6 +68,8 @@ map("n", "N", "Nzzzv", opts)
 map("n", "J", "mzJ`z", opts)
 map("v", "<", "<gv")
 map("v", ">", ">gv")
+map("i", "<C-e>", "<C-o>$", opts) -- Jumps to end of line during insert mode
+map("i", "<C-BS>", "<C-o>db", opts) -- Delete previous word without leaving insert mode
 
 -- Save / Quit
 map("n", "<C-s>", ":w<CR>", opts)
@@ -121,14 +123,6 @@ map("n", "sr", ":SnipReset<CR>:SnipClose<CR>", opts)
 
 -- Alpha
 map("n", "<leader>d", ":Alpha<CR>", opts)
-
--- Skeletons
-map("n", ",h", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.html<CR>6jwf>a")
-map("n", ",c", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.c<CR>4ji<Tab>")
-map("n", ",m", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.make<CR>j4li")
-map("n", ",t", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.tex<CR>2j9li")
-map("n", ",d", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.md<CR>1j6lA ")
-map("n", ",mi", ":-1read $HOME/.config/nvim/lua/skeletons/.skeleton.minipage.tex<CR>4j7w2li")
 
 -- BufferLine
 for i = 1, 9 do
