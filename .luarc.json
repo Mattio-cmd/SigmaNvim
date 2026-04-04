@@ -5,5 +5,9 @@
         "packer_bootstrap",
         "use",
         "config"
+    ],
+    "diagnostics.disable": [
+        "unused-function",
+        "unused-local"
     ]
 }
