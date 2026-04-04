@@ -30,16 +30,22 @@ vim.lsp.enable('svls')
 vim.lsp.enable('asm_lsp')
 
 vim.lsp.config('lua_ls', {
-  single_file_support = true,
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
 
-  root_markers = {
-    '.lua',
-    '.git',
-    '.luarc.json',
-    '.luarc.jsonc'
-  },
+  root_dir = function(bufnr, on_dir)
+    local fname = vim.api.nvim_buf_get_name(bufnr)
+
+    -- Try project root first
+    local root = vim.fs.root(fname, {
+      '.git',
+      '.luarc.json',
+      '.luarc.jsonc',
+    })
+
+    -- Fallback to file directory (guarantees attach)
+    on_dir(root or vim.fs.dirname(fname))
+  end,
 })
 vim.lsp.enable('lua_ls')
 
