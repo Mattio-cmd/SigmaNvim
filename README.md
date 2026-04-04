@@ -8,8 +8,6 @@
 <!--TODO: This-->
 
 ## Plugins
-- packer.nvim
-  * [`wbthomason/packer.nvim`](https://github.com/wbthomason/packer.nvim)
 - kanagawa
   * [`rebelot/kanagawa.nvim`](https://github.com/rebelot/kanagawa.nvim)
 - nerdcommenter
@@ -78,3 +76,11 @@
 - ```Control + v``` will vertically split the window.
 - ```Shift + h``` will horizontally split the window.
 - ```Shift + k``` will bring a help menu in whatever happens you are positioned.
+
+# Donate
+![Monero:](https://img.shields.io/badge/Monero-%23323330.svg?style=for-the-badge&logo=monero&logoColor=%8ea598)8C7LVn9tbxt13kb5Pc5JgfjPrMy7V9EU3dMcYZ84BsfqfRFwVZwssDkCrjyDAWsUFVPTdr4av3jvCaqNQsYfCHs6LtjdWU4
+![Monero QR](./img/xmr_qr.png)
+
+![BTC](https://img.shields.io/badge/Bitcoin-%23323330.svg?style=for-the-badge&logo=bitcoin&logoColor=%8ea598)bc1qvayl6tc84zyvxjsafme4asj5rhe9vljfsnum5y
+![Bitcoin QR](./img/btc_qr.png)
+
