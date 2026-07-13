@@ -39,6 +39,18 @@ ls.add_snippets("tex", {
 })
 
 ls.add_snippets("tex", {
+    s("prodint", {
+        t("\\langle "), i(1), t(", "), i(2), t(" \\rangle"),
+    })
+})
+
+ls.add_snippets("tex", {
+    s("fourier", {
+        t("\\mathcal{S_F}_\\mathcal{G} \\left\\{ "), i(1), t(" \\right\\}"),
+    })
+})
+
+ls.add_snippets("tex", {
     s("log", {
         t("$\\mathbf{"), i(1), t("}$"),
     })
@@ -60,6 +72,12 @@ ls.add_snippets("tex", {
 ls.add_snippets("tex", {
     s("ilap", {
         t("\\mathcal{L}^{-1} \\left\\{ "), i(1), t(" \\right\\}"),
+    })
+})
+
+ls.add_snippets("tex", {
+    s("operador", {
+        t("\\mathcal{ "), i(1), t(" }"), t("\\left\\{ "), i(2), t(" \\right\\}"),
     })
 })
 

@@ -4,7 +4,8 @@
         "vim",
         "packer_bootstrap",
         "use",
-        "config"
+        "config",
+        "on_attach"
     ],
     "diagnostics.disable": [
         "unused-function",

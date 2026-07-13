@@ -22,7 +22,7 @@ return {
 
     'KeitaNakamura/tex-conceal.vim',
 
-    'kyazdani42/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua',
 
 
    -- colorscheme
@@ -66,7 +66,7 @@ return {
   -- Greeter
   {
     'goolord/alpha-nvim',
-    dependencies = { 'kyazdani42/nvim-web-devicons' },
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
@@ -74,7 +74,7 @@ return {
 
   {
      'akinsho/bufferline.nvim',
-      dependencies = { 'kyazdani42/nvim-web-devicons' },
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
 
   -- treesitter

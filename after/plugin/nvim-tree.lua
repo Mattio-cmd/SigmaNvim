@@ -28,10 +28,6 @@ require'nvim-tree'.setup {
     update_cwd  = false,
     ignore_list = {}
   },
-  system_open = {
-    cmd  = nil,
-    args = {}
-  },
   filters = {
     dotfiles = false,
     custom = {}
